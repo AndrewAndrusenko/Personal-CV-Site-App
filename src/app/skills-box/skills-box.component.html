@@ -1,6 +1,6 @@
 <div class="skill-main-container">
-  <h1>Hard Skills</h1> 
-  <h2 >Here are some of my skills on which I have been working on for the past 2 years.</h2>
+  <h1>{{lang===languages.ENGLISH? 'Hard Skills':'Технический стек'}}</h1> 
+  <h2 >{{lang===languages.ENGLISH? 'Here are some of my skills on which I have been working on for the past 2 years.':'Вот мой стек знаний, над которыми я работал в течение последних 2 лет.'}}</h2>
   <div class="skill-boxes-contrainer">
     <div class="tilt-box-wrap">
       <span class="t_over"></span>
@@ -13,7 +13,7 @@
       <span class="t_over"></span>
       <span class="t_over"></span>
       <div class="skill-box">
-        <h2>Frontend</h2>
+        <h2>{{lang===languages.ENGLISH? 'Frontend':'Фронтэнд'}}</h2>
         <div class="skill-item">
           <img src="../assets/skills-logos/angularjs-original.svg" alt="angular" >
           <p>Angular</p> 
@@ -55,7 +55,7 @@
       <span class="t_over"></span>
       <span class="t_over"></span>
       <div class="skill-box">
-        <h2>Backend</h2>
+        <h2>{{lang===languages.ENGLISH? 'Backend':'Бэкенд'}}</h2>
         <div class="skill-item">
           <img src="../assets/skills-logos/postgresql.png" alt="postgresql" /> 
           <p>PostgreSQL</p> 
@@ -95,7 +95,7 @@
       <span class="t_over"></span>
       <span class="t_over"></span>
       <div class="skill-box">
-        <h2>Others</h2>
+        <h2>{{lang===languages.ENGLISH? 'Others':'Другое'}}</h2>
         <div class="skill-item">
           <img src="../assets/skills-logos/vs.svg" alt="vscode" /> 
           <p>VS Code</p> 

@@ -1,0 +1,35 @@
+.typingBlockying-block {
+  font-size: 1.9vw;
+  font-weight: bold;
+}
+
+.typingBlockying-block span {
+  color: rgb(98, 81, 168);
+}
+
+.typingBlockying-block h1 {
+  color: aliceblue;
+}
+
+#cursor {
+  animation: blink 1s linear infinite;
+  color: blue;
+  font-size: 1.9vw;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
+@media (max-width: 480px) {
+  .typingBlockying-block {
+    font-size: 6vw;
+  }
+  #cursor {
+    font-size: 6vw;
+  }
+}/*# sourceMappingURL=typing-animation.component.css.map */

@@ -1,0 +1,65 @@
+#animated-background {
+  /*   background-image: url("../assets/background/unsplash2.jpg");
+    background-size: auto; */
+  background-color: rgb(0, 34, 34);
+}
+
+.menu-container {
+  position: relative;
+  z-index: 10;
+}
+
+.desktop {
+  background-image: "../assets/background/unsplash.jpg";
+  margin-left: 14vw;
+  margin-right: 14vw;
+}
+
+.mobile {
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.about-desktop {
+  display: flex;
+  padding-top: 10vh;
+  width: 100%;
+}
+
+.about-mobile {
+  display: flex;
+  padding-top: 10vh;
+  top: 0;
+  margin-left: 2vw;
+}
+
+#aam-core {
+  margin-top: 8vh;
+}
+
+#bp-charts {
+  margin-top: 4vh;
+}
+
+.contact-me-section {
+  margin-top: 4vh;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  /*   .desktop {
+      margin-left: 1vw;
+      margin-right: 1vw;
+    } */
+}/*# sourceMappingURL=app.component.css.map */

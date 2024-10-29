@@ -6,18 +6,26 @@
 <div class="about-main-container">
   <section class="about-text-container">
     <div class="text-title">
-      <h1>Hi, I am Andrey Andusenko</h1>
+      <h1>{{lang===languages.ENGLISH? 'Hi, I am Andrey Andusenko':'Всем, привет! Меня зовут Андрей Андрусенко'}}</h1>
       <div class="typying"><app-typing-animation></app-typing-animation></div> 
     </div>
-      <span>I am a highly motivated developer with extensive financial expertise and a passion for learning.</span><br><br>
-      <span>I have created from scratch a brand-new 
-         <a [routerLink]=""  (click)="navigateToSection('aam-core')" >Asset Management Platform</a>
-        based on Decoupled, RESTful API, Angular - NodeJS - PostgreSQL architecture.
+      <span>
+        {{lang===languages.ENGLISH? 
+        'I am a highly motivated developer with extensive financial expertise and a passion for learning.':
+        'Я крайне увлеченный своим делом разработчик с разносторонней экспертизой на финансовых рынках и желанием постоянно обучаться.'
+        }}
+      </span><br><br>
+      <span>{{lang===languages.ENGLISH?  'I have created from scratch a brand-new' : 'Я c нуля разработал новую '}}
+         <a [routerLink]=""  (click)="navigateToSection('aam-core')" >{{lang===languages.ENGLISH? 'Asset Management Platform':'платформу по Управлению Активами'}}</a>
+         {{lang===languages.ENGLISH?'based on Decoupled, RESTful API, Angular - NodeJS - PostgreSQL architecture.':'основанную на распределенной архитектуре Angular - NodeJS - PostgreSQL + RESTful API'}}
       </span><br>
-      <span>The platform covers 
-        <a  [routerLink]="" (click)="navigateToSection('bp-charts')">full investment cycle</a> 
-        and provides comprehensive financial accounting system.</span><br><br>
-      <span>By presenting my project I intend to demonstrate my ability to be efficient part of any team and be ready take any challenge.</span><br><br>
+      <span>{{lang===languages.ENGLISH? 'The platform covers': 'Платформа обслуживает'}}
+        <a  [routerLink]="" (click)="navigateToSection('bp-charts')">{{lang===languages.ENGLISH? 'full investment cycle':'полный инвестиционный процесс'}}</a> 
+        {{lang===languages.ENGLISH? 'and provides comprehensive financial accounting system.':' с отражением всех операций в системе бухгалтерского учета и возможностью гибкого масштабирования.'}}</span><br><br>
+      <span>
+        {{lang===languages.ENGLISH? 'By presenting my project I intend to demonstrate my ability to be efficient part of any team and be ready take any challenge.'
+        :'Презентовав свой проект, я намерен продемонстрировать свою готовность быть часть команды и эффективно справляться с любыми задачами.'}}
+        </span><br><br>
   </section>
   <ng-container *ngIf="deviceType==='Desktop'">
     <img  mat-card-image src="../assets/cyprus_profile2.jpg">

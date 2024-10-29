@@ -1,27 +1,39 @@
 <div class="title-box">
-  <h1>Experience</h1>
-  <h2>My work experience as a developer and a finacial expert withing different companies and projects</h2>
+  <h1>{{lang===languages.ENGLISH? 'Experience':'Опыт рыботы'}}</h1>
+  <h2>{{lang===languages.ENGLISH? 
+    'My work experience as a developer and a finacial expert within different companies and projects':
+    'Мой опыт работы в качестве разработчика и финансового эксперта в различных компаниях и проектах'}}</h2>
 </div>
 <div class="timeline">
   <div  class="container left-container" >
-    <p class="period-info">2023 - Present</p>
+    <p class="period-info">{{lang===languages.ENGLISH? '2023 - Present':'2023 - Настоящее время'}}</p>
     <img #aicon class="timeline-img" src="../assets/companies-logos/3A.png" style="background-color: lightblue;">
     <div  #animated class="text-box left-box">
       <div class="title-text-box">
         <img class="logos-img" src="../assets/companies-logos/3A.png" style="background-color: lightblue;">
         <div class="title-text-box-info" >
-          <h2 style="margin: 0">Full Stack Developer</h2>
+          <h2 style="margin: 0">{{lang===languages.ENGLISH? 'Full Stack Developer':'Full Stack Разрабочик'}}</h2>
           <p style="margin: 0">3A Solutions Inc</p> 
-          <p style="margin: 0">2023 - Present</p>
+          <p style="margin: 0">{{lang===languages.ENGLISH? '2023 - Present':'2023 - Настоящее время'}}</p>
         </div>
       </div>
       <ul>
-        <li>Developed a decoupled, scalable, ready-to-go asset management web application platform from scratch</li>
-        <li>Implemented complete asset management model: Model Portfolios, Strategies, Orders, Balance, Trades, Portfolios, Accounts, Investment Restrictions, Performance and Management Fees (hwm, sliding scales), Portfolio returns analysis (time-weighed rate of return, pl factor analysis)</li>
-        <li>Implemented a comprehensive financial accounting system</li>
-        <li>Built RESTful API architecture using Node JS (Express) layer to isolate the database from frontend and simplify further development and maintenance</li>
-        <li>Created frontend using Angular, Material Design and RxJS</li>
-        <li>Built an effectively structured database using PostgreSQL and created functions to perform complex calculations</li>
+        <span *ngIf="lang===languages.ENGLISH">
+          <li>Developed a decoupled, scalable, ready-to-go asset management web application platform from scratch</li>
+          <li>Implemented complete asset management model: Model Portfolios, Strategies, Orders, Balance, Trades, Portfolios, Accounts, Investment Restrictions, Performance and Management Fees (hwm, sliding scales), Portfolio returns analysis (time-weighed rate of return, pl factor analysis)</li>
+          <li>Implemented a comprehensive financial accounting system</li>
+          <li>Built RESTful API architecture using Node JS (Express) layer to isolate the database from frontend and simplify further development and maintenance</li>
+          <li>Created frontend using Angular, Material Design and RxJS</li>
+          <li>Built an effectively structured database using PostgreSQL and created functions to perform complex calculations</li>
+        </span>
+        <span *ngIf="lang!=='english'">
+          <li>Angular - Node - PostgeSQL: c нуля разработал распределенную, масштабируемую, готовую к работе платформу для управления активами клиентов инвестиционных компаний</li>
+          <li>Реализована полная модель управления активами: модельные портфели, стратегии, ордера, бухгалтерский баланс, сделки, портфели, счета, инвестиционные ограничения, вознаграждение за успех и управление (hwm, скользящие шкалы), анализ доходности портфеля (взвешенная по времени норма доходности, факторный анализ pl)</li>
+          <li>Внедрил комплексную систему финансового учета</li>
+          <li>Создана архитектура RESTful API (более 100 endpoints) с использованием Node JS (Express), с целью изолирования базы данных от фронтенда, упрощения дальнейшего развития и обслуживания платформы</li>
+          <li>Разработан интерфейс на базе Angular, Material Design и RxJS</li>
+          <li>Спроектирована эффективно структурированная база данных с использованием PostgreSQL. Добавлены функции для выполнения сложных вычислений: FIFO, вознаграждение, баланс, ограничения</li>
+        </span>
       </ul>
       <span class="left-container-arrow"></span>
     </div>
@@ -33,18 +45,26 @@
       <div class="title-text-box">
         <img class="logos-img" src="../assets/companies-logos/BNP.png" style="background-color: lightblue;">
         <div class="title-text-box-info" >
-          <h2 style="margin: 0">Senior Specialist in Capital Markets</h2>
+          <h2 style="margin: 0">{{lang===languages.ENGLISH? 'Senior Specialist in Capital Markets':'Главный специалист на глобальных рынках'}}</h2>
           <p style="margin: 0">BNP Paribas</p> 
           <p style="margin: 0">2021 - 2023</p>
         </div>
       </div>
       <ul>
-        <li>Created SPA BackOffice Dashboard. Flexible UI to get live customized data regarding trades and payments in order to process them duly and timely (HTML=CSS - JavaScript - Node JS - SQL Server)</li>
-        <li>Developed a tax suspension verification service for clients applying for deposits (HTML Scraping - VBA)</li>
-        <li>Developed a module to track the document flow for trades confirmations. User-friendly interface for status management and reconciliation functionality (SQL Server - Access)</li>
-        <li>Settled FX/MM/Forwards/IRS/CCS trades. Controlled settlement, verified payments. Maintained and controlled cash positions for front office</li>
+        <span *ngIf="lang===languages.ENGLISH">
+          <li>Created BackOffice Dashboard. Flexible UI to get live customized data regarding trades and payments in order to process them duly and timely (HTML=CSS - JavaScript - Node JS - SQL Server)</li>
+          <li>Developed a tax suspension verification service for clients applying for deposits (HTML Scraping - VBA)</li>
+          <li>Developed a module to track the document flow for trades confirmations. User-friendly interface for status management and reconciliation functionality (SQL Server - Access)</li>
+          <li>Settled FX/MM/Forwards/IRS/CCS trades. Controlled settlement, verified payments. Maintained and controlled cash positions for front office</li>
+        </span>
+        <span *ngIf="lang!=='english'">
+          <li> Создан модуль для бэк-офиса. Гибкий пользовательский интерфейс для получения актуальных данных о сделках и платежах с целью их своевременной обработки. Импорт биржевых отчетов с целью создания управленческой отчетности (HTML - CSS - JavaScript - Node JS - SQL Server).</li>
+          <li> Разработал сервис проверки клиентов, заинтересованных в открытии депозитов, на наличие ограничений от налоговых органов (HTML Scrapping - VBA).</li>
+          <li> Разработал модуль для отслеживания документооборота подтверждения сделок. Удобный интерфейс для управления статусом и функциональностью сверки (SQL Server - Access).</li>
+          <li> Расчеты по FX/MM/Forwards/IRS/CCS сделкам. Контроль расчетов, подтверждение платежей. Ведение и контроль денежной позиции для фронт-офиса.</li>
+        </span>
       </ul>
-       <span class="right-container-arrow"></span>
+      <span class="right-container-arrow"></span>
     </div>
   </div>
   <div  class="container left-container">
@@ -54,14 +74,20 @@
       <div class="title-text-box">
         <img class="logos-img" src="../assets/companies-logos/OWN.png" style="background-color: lightblue;">
         <div class="title-text-box-info" >
-          <h2 style="margin: 0">Private Investor</h2>
+          <h2 style="margin: 0">{{lang===languages.ENGLISH? 'Private Investor':'Частный инвестор'}}</h2>
           <p style="margin: 0">Own Asset Portfolio Inc</p> 
           <p style="margin: 0">2016 - 2021</p>
         </div>
       </div>
       <ul>
-        <li>Managed my own investment portfolio using various products through brokerage account and collective investments</li>
-        <li>Self-education and development in financial markets</li>
+        <span *ngIf="lang===languages.ENGLISH">
+          <li>Managed my own investment portfolio using various products through brokerage account and collective investments</li>
+          <li>Self-education and development in financial markets</li>
+        </span>
+        <span *ngIf="lang!=='english'">
+          <li>Управлял собственным инвестиционным портфелем, используя различные продукты, брокерский счет и коллективные инвестиции</li>
+          <li>Самообразование и развитие на финансовых рынках</li>
+        </span>
       </ul>
       <span class="left-container-arrow"></span>
     </div>
@@ -73,14 +99,24 @@
       <div class="title-text-box">
         <img class="logos-img" src="../assets/companies-logos/RIM3.png" style="background-color: var(--themeColor);">
         <div class="title-text-box-info" >
-          <h2 style="margin: 0">Head of Operations and Support Department</h2>
+          <h2 style="margin: 0">{{lang===languages.ENGLISH? 'Head of Operations and Support Department':'Руководитель Мидл Офиса'}} </h2>
           <p style="margin: 0">Renaissance Investment Management</p> 
           <p style="margin: 0">2006 - 2011</p>
         </div>
       </div>
       <ul>
-        <li>2 middle office platforms were launched to ensure consecutive growth of the private client asset management business</li>
-        <li>Developed an additional module for the first middle-office platform, which allowed it to be launched on time. The module was a crucial part and was constantly being developed in accordance with business demands</li>
+        <span *ngIf="lang===languages.ENGLISH">
+          <li>2 middle office platforms were launched to ensure consecutive growth of the private client asset management business</li>
+          <li>Developed an additional module for the first middle-office platform, which allowed it to be launched on time. The module was a crucial part and was constantly being developed in accordance with business demands</li>
+          <li>Took part in the working groups of company’s projects for the implementation of new products/processes: preparation and approval of business requirements, technical specifications, preparation of test plans/test scenarios, test support, launch of new business processes of the unit, maintenance and control of the backlog implementation</li>
+          <li> Supported and controlled of Department’s daily activities</li>
+        </span>
+        <span *ngIf="lang!=='english'">
+          <li>Запущены 2 платформы фронт/мидл офиса, для обеспечения последовательного роста бизнеса по управлению активами частных клиентов</li>
+          <li>Разработан дополнительный модуль для первой платформы, что позволило запустить ее в срок. Модуль был важной частью и постоянно развивался в соответствии с требованиями бизнеса</li>
+          <li>Принимал участие в рабочих группах проектов компании по внедрению новых продуктов/процессов: подготовка и утверждение бизнес-требований, технических спецификаций, подготовка планов тестирования/сценариев тестирования, поддержка тестирования, запуск новых бизнес-процессов подразделения, сопровождение и контроль выполнения бэклога</li>
+          <li>Поддержка и контроль повседневной деятельности отдела</li>
+        </span>
       </ul>
       <span class="right-container-arrow"></span>
     </div>

@@ -1,15 +1,14 @@
-@import '../../styles/media';
-
 :host {
-  --toolBarColor : rgb(18, 39, 83,0.5); 
-  --menuColor : aliceblue;
+  --toolBarColor: rgb(18, 39, 83,0.5);
+  --menuColor: aliceblue;
   --transition-duration: 0.2s;
 }
+
 .mobile-toolbar-wrapper {
   display: flex;
   width: 100vw;
-
 }
+
 .name-wrap {
   width: 86vw;
   display: flex;
@@ -17,67 +16,80 @@
   align-items: center;
   height: 6vh;
 }
-.mobile-toolbar-wrapper mat-toolbar{
+
+.mobile-toolbar-wrapper mat-toolbar {
   height: 6vh;
-  color: var(--menuColor)
+  color: var(--menuColor);
 }
+
 .mobile-toolbar-wrapper a {
-  color:  var(--menuColor);
-  text-decoration:none;
+  color: var(--menuColor);
+  text-decoration: none;
   vertical-align: middle;
 }
+
 ::ng-deep .cust-menu {
-  background-color:  rgb(18, 39, 83,0.5); 
+  background-color: rgba(18, 39, 83, 0.5);
   width: 100vw;
 }
+
 .mat-menu-item {
-  color:aliceblue;
+  color: aliceblue;
   font-size: 2.5vh;
 }
+
 .wrapper {
-  width: 100%; 
-  display: flex; 
-  justify-content:center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
 .mat-toolbar {
   margin-top: 0.2vh;
-  background-color:rgb(18, 39, 83);
+  background-color: rgb(18, 39, 83);
   border-radius: 1%/15%;
   position: fixed;
-  top:0;
+  top: 0;
   width: 80vw;
   padding-left: 1vw;
   padding-right: 1vw;
   height: 8vh;
+}
 
-}
 .desktop-toolbar-wrapper {
- display: inline-flex; 
- width: 80vw;
- justify-content: space-around;
+  display: inline-flex;
+  width: 80vw;
+  justify-content: space-around;
 }
+
 .desktop-toolbar-wrapper a {
   position: relative;
-  color:   rgb(125, 204, 204);
-  text-decoration:none;
+  color: rgb(125, 204, 204);
+  text-decoration: none;
   font-size: 1.2vw;
-  @include hover {
-    &::after {
-      width: 100%;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    translate: -50%;
-    width: 0;
-    height: 2px;
-    background-color: currentColor;
-    transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .desktop-toolbar-wrapper a:hover::after {
+    width: 100%;
   }
 }
+@media (hover: none) {
+  .desktop-toolbar-wrapper a:active::after {
+    width: 100%;
+  }
+}
+.desktop-toolbar-wrapper a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: var(--transition-duration);
+}
+
 /* &-link {
   position: relative;
   display: inline-flex;
@@ -93,24 +105,26 @@
   transform: scale(1.05);
 } */
 .gitRef {
-  font-size: large; 
+  font-size: large;
   font-weight: bold;
-  border-width:1px;
+  border-width: 1px;
   border-style: solid;
   border-radius: 5%/15%;
-  padding-left:1%;
+  padding-left: 1%;
   padding-right: 1%;
 }
+
 .gitRefMobile {
-  color:aliceblue;
+  color: aliceblue;
   font-size: 2.5vh;
 }
-@media (min-width:2000px) {
+
+@media (min-width: 2000px) {
   .mat-toolbar {
     width: 62vw;
   }
 }
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .desktop-toolbar-wrapper a {
     font-size: 1.4vw;
   }
@@ -120,9 +134,9 @@
   .desktop-toolbar-wrapper {
     width: 96vw;
   }
-@media (max-width:480px) {
+}
+@media (max-width: 1000px) and (max-width: 480px) {
   .mat-toolbar {
     width: 100vw;
   }
-}
-}
+}/*# sourceMappingURL=main-menu.component.css.map */
