@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ENV } from '../env/env';
 
 @Component({
   selector: 'app-contact-me-form',
@@ -23,7 +24,7 @@ export class ContactMeFormComponent {
     })
   }
   sendToTelegram() {
-    this.http.get('https://api.telegram.org/bot7474875973:AAG0BZrWmqwdMdbNMKoRUF7Lq7C_PHoCwfM/sendMessage?chat_id=1005311807&text='+JSON.stringify(this.contactForm.value))
+    this.http.get(`https://api.telegram.org/bot${ENV.TG_BOT_TOKEN}/sendMessage?chat_id=1005311807&text=`+JSON.stringify(this.contactForm.value))
     .subscribe(()=>{
       this.snack.open('Thank you for your message! \n I will reply you asap','OK',{ panelClass: ['snackbar-success']});
       this.contactForm.reset()
