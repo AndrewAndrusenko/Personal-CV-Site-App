@@ -14,8 +14,8 @@
 }
 .slide-img {
   max-width: 110%;
-  border-radius: 2%/4%;
-  margin-left: -4vw;
+  border-radius: 10%/16%;
+  width: 100%;
 }
 .title-container-text {
   margin-left: 1vw; 
@@ -28,17 +28,17 @@
 }
 h3{
   font-size: 2vw;
-  font-weight: bold;
+ // font-weight: bold;
   color: var(--mainFontColor);
-  color: white;
+  color: rgb(254, 254, 255);
   margin-bottom: 1hv;
  }
 a{
   text-decoration:underline;
   cursor:pointer;
-  color: yellowgreen;
-  font-weight: bold;
-  font-size: 1.5vw;
+  color: rgb(40, 88, 200);
+ // font-weight: bold;
+  font-size: 1.3vw;
   margin-top: auto; 
   margin-left: auto; 
   padding-bottom: 1.5vh;
@@ -66,7 +66,7 @@ a{
   .desktop-ref {
     margin-left: auto; 
     margin-right: 4vw;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     margin-bottom: 0.5vh;
     padding-bottom: 0;
   }
