@@ -1,5 +1,6 @@
+@use '../styles/variables.scss' as vars; 
 .skill-main-container {
-  color: var(--mainFontColor);
+  color: vars.$base---light;
   padding-top: 2vh;
   padding-bottom: 2vh;
   text-align: center;
@@ -41,8 +42,9 @@
   height: 33vh;
   border-width: 2px;
   border-radius: 15px;
-  border-style: solid;
-  background-color: rgb(35, 35, 35);
+  border : 1px solid vars.$base---light;
+  //background-color: vars.$base---primary;
+  background-color: transparent;
   -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
   -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
   box-shadow:0 0 1vw  var(--boxShadowColor);
@@ -56,9 +58,7 @@
   padding-right: 0.4vw;
   padding-top: 0.4vw;
   padding-bottom: 0.4vw;
-  border-color: rgb(59, 53, 53);
-  border-width: 2px;
-  border-style: solid;
+  border: 1px solid vars.$base---light;
   border-radius: 15px;
   align-items: center; 
   min-width: 7vw;

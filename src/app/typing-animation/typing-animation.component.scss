@@ -1,16 +1,19 @@
+@use '../styles/variables.scss' as vars; 
 .typingBlockying-block {
-  font-size: 1.9vw; 
-  font-weight: bold;
-}
-.typingBlockying-block span{
-  color:rgb(98, 81, 168); 
-}
-.typingBlockying-block h1 {
-  color: aliceblue;
+    color: vars.$base---light;
+    font-size: 1.9vw; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:6px;
+    & > span {
+      color:vars.$base---primary; 
+      font-weight: 400;
+    }
 }
 #cursor {
   animation: blink 1s linear infinite;
-  color: blue;
+  color: vars.$base---primary; 
   font-size: 1.9vw; 
 }
 @keyframes blink {

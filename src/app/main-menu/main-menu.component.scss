@@ -1,8 +1,4 @@
-:host {
-  //--toolBarColor : rgb(18, 39, 83,0.5); 
-  --toolBarColor : transparent; 
-  --menuColor : aliceblue;
-}
+@use '../styles/variables.scss' as vars; 
 .mobile-toolbar-wrapper {
   display: flex;
   width: 100vw;
@@ -17,10 +13,10 @@
 }
 .mobile-toolbar-wrapper mat-toolbar{
   height: 6vh;
-  color: var(--menuColor)
+  color: vars.$base---primary;
 }
 .mobile-toolbar-wrapper a {
-  color:  var(--menuColor);
+  color:  vars.$base---primary;
   text-decoration:none;
   vertical-align: middle;
 }
@@ -39,33 +35,32 @@
 }
 .mat-toolbar {
   margin-top: 0.2vh;
-  background-color:rgb(101, 126, 185);
-  opacity: 0.7;
+  background-color:vars.$base---primary;
+  border-radius: vars.$corner-radius--xl;
+  border: unset;
+  opacity: 0.6;
   //background-color:rgb(18, 39, 83);
-  border-radius: 1%/15%;
   position: fixed;
   top:0;
   width: 80vw;
   padding-left: 1vw;
   padding-right: 1vw;
-  height: 8vh;
+  height: 7vh;
 
 }
 .desktop-toolbar-wrapper {
- display: inline-flex; 
- width: 80vw;
- justify-content: space-around;
+    display: inline-flex; 
+    width: 80vw;
+    justify-content: space-around;
 }
 .desktop-toolbar-wrapper a {
-  color:   rgb(255, 255, 255);
+  color:vars.$base---light;
   text-decoration:none;
   font-size: 1.2vw;
+  font-weight: 200;
 }
 .desktop-toolbar-wrapper a:hover {
-  text-decoration:underline;
-  color:  rgb(3, 81, 145);
-  text-decoration-thickness: 0.15em;
-  text-underline-offset:0.2em;
+  color:  vars.$base---light;
   transform: scale(1.05);
 }
 .gitRef {

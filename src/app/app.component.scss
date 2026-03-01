@@ -1,3 +1,6 @@
+* {
+    font-family: 'Onest' !important;
+}
 #animated-background {
 //  background-image: url("../assets/background/bg-light-valley.jpg");
  // background-image: url("../assets/background/job566-19-a.jpg");
@@ -17,6 +20,7 @@
  // background-image: url("../assets/background/bg-light-valley.jpg");
   margin-left: 14vw;
   margin-right: 14vw;
+  overflow: hidden;
 }
 .mobile {
   margin-left: 0vw;

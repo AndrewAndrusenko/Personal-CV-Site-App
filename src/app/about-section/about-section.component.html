@@ -5,19 +5,21 @@
 </div>
 <div class="about-main-container">
   <section class="about-text-container">
-    <div class="text-title">
-      <h1>Hi, I am Andrey Andusenko</h1>
-      <div class="typying"><app-typing-animation></app-typing-animation></div> 
-    </div>
-      <span>I am a highly motivated developer with extensive financial expertise and a passion for learning.</span><br><br>
-      <span>I have created from scratch a brand-new 
-         <a [routerLink]=""  (click)="navigateToSection('aam-core')" >Asset Management Platform</a>
+        <div class="text-title">
+            <div>Hi, I am Andrey Andusenko!</div>
+            <div class="typying"><app-typing-animation></app-typing-animation></div> 
+        </div>
+        <span sty>I'm a fully committed full stack developer. I really love what I do.
+            <br>Creating apps and pushing my limits drives me.
+        </span>
+        <span>I have created from scratch a brand-new 
+            <a [routerLink]=""  (click)="navigateToSection('aam-core')" >Asset Management Platform</a>
         based on Decoupled, RESTful API, Angular - NodeJS - PostgreSQL architecture.
-      </span><br>
-      <span>The platform covers 
-        <a  [routerLink]="" (click)="navigateToSection('bp-charts')">full investment cycle</a> 
-        and provides comprehensive financial accounting system.</span><br><br>
-      <span>By presenting my project I intend to demonstrate my ability to be efficient part of any team and be ready take any challenge.</span><br><br>
+        </span>
+        <span>The platform covers 
+        <a  [routerLink]="" (click)="navigateToSection('bp-charts')">Full Investment Cycle</a> 
+        and provides comprehensive financial accounting system.</span>
+        <span>By presenting my project I intend to demonstrate my ability to be efficient part of any team and be ready take any challenge.</span><br><br>
   </section>
   <ng-container *ngIf="deviceType==='Desktop'">
     <img  mat-card-image src="../assets/cyprus_profile2.jpg">
