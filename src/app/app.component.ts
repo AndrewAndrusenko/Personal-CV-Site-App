@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChildren} from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { IconBaseService } from './icon-base.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,6 +27,7 @@ export class AppComponent
     }
   constructor (
     private deviceService: DeviceDetectorService,
+    private iconBaseService: IconBaseService,
   ){
     switch (true) {
       case this.deviceService.isDesktop():

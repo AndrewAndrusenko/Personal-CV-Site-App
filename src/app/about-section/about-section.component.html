@@ -9,13 +9,74 @@
             <div>Hi, I am Andrey Andusenko!</div>
             <div class="typying"><app-typing-animation></app-typing-animation></div> 
         </div>
-        <span sty>I'm a fully committed full stack developer. I really love what I do.
-            <br>Creating apps and pushing my limits drives me.
+        <span sty>I'm a fully committed full stack developer. 
+            <span class="base-color">
+                I really love what I do.
+
+            </span>
+            <br>Creating apps and pushing limits drives me.
         </span>
-        <span>I have created from scratch a brand-new 
-            <a [routerLink]=""  (click)="navigateToSection('aam-core')" >Asset Management Platform</a>
-        based on Decoupled, RESTful API, Angular - NodeJS - PostgreSQL architecture.
+        <span style="display: flex; flex-direction: column;gap:8px">
+            <a [routerLink]=""  (click)="navigateToSection('aam-core')" >
+               <span style="font-weight: 600;">
+                   Main stack is 
+
+               </span> 
+               Angular (+RxJs deep), Node.js, PostgreSQL. </a>
+
+       
         </span>
+        <div class="projects" style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="projects-title" style="font-weight: 500;">Projects:</div>
+            <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
+
+                <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
+                    <mat-icon svgIcon="briefcase-4-fill" style="width: 32px; height: 32px;"></mat-icon>
+                    <span class="base-color" style="font-weight: 500;">
+                        Business Process & Electronic Document Management System 
+                        
+                </span>
+                </div>
+                <div class="projects-title" style="margin-left: 30px;">
+                    <div class="item" style="display: flex; gap: 8px; align-items: center;">
+                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+                        
+                        Implemented new UI, design model, best practices
+                    </div>
+                    <div class="item"  style="display: flex; gap: 8px;">
+                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+
+                        Deleveloped complex interactive data visualization. And more..
+                    </div>
+
+                </div>
+            </div>
+            <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
+
+                <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
+                    <mat-icon svgIcon="coins-fill"style="width: 32px; height: 32px;"></mat-icon>
+                    <span class="base-color" style="font-weight: 500;">
+                        Asset Management Platform 
+                        
+                </span>
+                </div>
+                <div class="projects-title" style="margin-left: 30px;">
+                    <div class="item" style="display: flex; gap: 8px; align-items: center;">
+                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+                        
+                        Implemented new UI, design model, best practices
+                    </div>
+                    <div class="item"  style="display: flex; gap: 8px;">
+                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+
+                        Deleveloped complex interactive data visualization. And more..
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="projects-title">Projects:</div>
+        </div>
         <span>The platform covers 
         <a  [routerLink]="" (click)="navigateToSection('bp-charts')">Full Investment Cycle</a> 
         and provides comprehensive financial accounting system.</span>

@@ -1,5 +1,7 @@
 @use '../styles/variables.scss' as vars; 
-
+.base-color {
+    color:vars.$base---primary;
+}
 .foto-wrap {
   display: flex;
   width: 100%;
