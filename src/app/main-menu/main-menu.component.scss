@@ -35,10 +35,11 @@
 }
 .mat-toolbar {
   margin-top: 0.2vh;
-  background-color:vars.$base---primary;
+  background-color:vars.$base---secondary;
   border-radius: vars.$corner-radius--xl;
+  border-radius: 6px;
   border: unset;
-  opacity: 0.6;
+ // opacity: 0.6;
   //background-color:rgb(18, 39, 83);
   position: fixed;
   top:0;
@@ -54,10 +55,12 @@
     justify-content: space-around;
 }
 .desktop-toolbar-wrapper a {
-  color:vars.$base---light;
+  color:vars.$base---primary;
   text-decoration:none;
-  font-size: 1.2vw;
-  font-weight: 500;
+  font-size: 1.1vw;
+  font-weight: 300;
+  opacity: 1;
+  
 }
 .desktop-toolbar-wrapper a:hover {
   color:  vars.$base---light;

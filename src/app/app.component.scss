@@ -5,8 +5,9 @@
 #animated-background {
 //  background-image: url("../assets/background/bg-light-valley.jpg");
  // background-image: url("../assets/background/job566-19-a.jpg");
-  background-image: url("../assets/background/aesthetic-ocean3.jpg"); 
+ // background-image: url("../assets/background/aesthetic-ocean3.jpg"); 
   // background-image: url("../assets/background/marine-composition-with-copyspace.jpg"); 
+  background: vars.$base---light-hover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

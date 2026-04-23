@@ -1,10 +1,12 @@
+@use '../styles/variables.scss' as vars; 
+
 :host {
-  --themeColor :  rgb(1, 6, 2);  
+  --themeColor : vars.$base---secondary;  
 }
 .title-box {
   margin-top: 4vh;
   text-align: center;
-  color: white;
+  color: vars.$base---primary;
   font-weight: bold;
 }
 .title-box h1 {
@@ -22,16 +24,14 @@
 .timeline::after {
   content: '';
   position:absolute;
-  width: 0.3vw;
+  width: 0.4vw;
   height:100%;
-  background:  var(--themeColor);
   top:0;
   left:36vw;
   z-index: -1;
   border-width: 2px;
   border-radius: 15px;
-  border-style: solid;
-  background-color: rgb(16, 17, 17);
+  background-color:vars.$base---primary;
   -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
   -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
   box-shadow:0 0 1vw  var(--boxShadowColor);
@@ -51,7 +51,7 @@
   left:39vw
 }
 .period-info {
-  color: aliceblue;
+  color: vars.$base---primary;
   font-size: 1vw; 
   position: absolute;
   left: 35vw;
@@ -59,7 +59,7 @@
   top:4vh;
 }
 .right-container .period-info {
-  color: aliceblue;
+  color:vars.$base---primary;
   font-size: 1vw; 
   position: absolute;
   left: -11vw;
@@ -73,7 +73,7 @@
   z-index: 1;
   border-width: 1.5px;
   border-style: solid;
-  border-color: aliceblue;
+  border-color: vars.$line---extra;
   border-radius: 50%;
   opacity: 0;
 }
@@ -86,17 +86,17 @@
   transform: scale(3);
 }
 .text-box {
-  padding: 1% 3% 0px 0px;
-  background-color: var(--themeColor);
+  padding: 1% 3% 8px 0px;
   font-size: 0.9vw;
   line-height: 1.2vw;
   position: relative;
   border-radius: 6px;
-  color: var(--mainFontColor);
-  border-width: 2px;
+  color: vars.$text---light;
+  border-width: 1px;
   border-radius: 15px;
-  border-style: solid;
-  background-color: rgb(16, 17, 17);
+ // border-style: solid;
+  border-color: vars.$line---hover;
+ background-color:vars.$base---primary;
   -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
   -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
   box-shadow:0 0 1vw  var(--boxShadowColor);
@@ -115,6 +115,7 @@
   transition: all 2s ease;
 }
 .title-text-box {
+    margin-top: 10px;
   display: flex;
   margin-bottom: 1vh;
 }
@@ -123,7 +124,7 @@
   height: 3vw;
   opacity: 1;
   left: 0 ;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-right: 1vw;
   margin-left: 1vw;
 }

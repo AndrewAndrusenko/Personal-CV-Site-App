@@ -1,11 +1,13 @@
+@use '../styles/variables.scss' as vars; 
+
 .title-wrap {
   text-align: center;
-  color: white;
+  color: vars.$base---primary;
 }
 .m-h1{
   font-size: 2.5vw;
   font-weight: bold;
-  color: white;
+  color: vars.$base---primary;
   margin-bottom: 4vh;
 }
 .m-h2{
@@ -23,7 +25,7 @@
   border-width: 1px;
   border-color: var(--mainFontColor);
   border-radius: 2vw/2vw;
-  background-color:rgb(26, 35, 44);
+  background-color:vars.$base---secondary;
   padding: 1vw;
   width: 41vw;
   -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
@@ -36,7 +38,7 @@
   align-items: center;
 }
 .send-wrap p {
-  color: aliceblue;
+  color: vars.$base---primary;
   font-size: 1.3vw;
   margin: 0;
 }
@@ -45,13 +47,15 @@
   width: 3vw;
 }
 .mat-form-field {
-  background-color: rgb(67, 74, 96);
+  background-color: vars.$base---light-hover;
   width: 25vw;
   border-radius: 1vw/1vw;
   margin-bottom: 1vh;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
-  color: azure;
+  color: vars.$base---primary;
+  min-height: 44px;
+  padding: 10px;
 }
 .m-error {
   color: rgb(173, 60, 60)
@@ -77,9 +81,10 @@
   width: 40vw;
   height: 5vh;
   font-size: large;
-  background-image: linear-gradient(to right, rgb(44, 89, 118), rgb(49, 182, 113));
+ // background-image: linear-gradient(to right, rgb(44, 89, 118), rgb(49, 182, 113));
+ background-color: vars.$base---primary;
   border: 0;
-  color: rgba(var(--text-color));
+  color: vars.$base---light-hover;
 }
 @media (max-width:1000px) {
   .m-h1{

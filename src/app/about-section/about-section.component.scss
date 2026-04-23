@@ -2,6 +2,9 @@
 .base-color {
     color:vars.$base---primary;
 }
+.accent-color {
+    color:vars.$base---accent;
+}
 .foto-wrap {
   display: flex;
   width: 100%;
@@ -36,17 +39,10 @@
   width: 50vw;
   margin-right: 8vw;
   line-height:1.8vw; 
-  color: vars.$base---light ;
+  color: vars.$text---primary ;
   font-weight: 300;
  }
-.about-text-container h1 {
-  color:vars.$base---light ; 
-  font-size: 2vw;
- // font-weight: bold;
-  margin-bottom: 1vh;
-  font-family: vars.$font-family !important;
-}
- .about-text-container {
+.about-text-container {
     display: flex;
     flex-direction: column;
     gap:8px;
@@ -54,7 +50,15 @@
     white-space: pre-line;
     text-align: justify;
     text-align-last: left;
+    & > .item-personal{
+         display: flex; 
+         gap: 8px; 
+         align-items: center;
+         min-height: 40px;
+    }
     & > .text-title{
+        color:vars.$base---primary ; 
+        font-weight: 200;
         font-size: 2vw;
         display: flex;
         flex-direction: row;

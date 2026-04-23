@@ -1,7 +1,10 @@
+@use '../styles/variables.scss' as vars; 
+
 .title-container {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  flex-direction: column;
+  margin-right: 6vw;
 }
 .title-wrap {
   display: flex;
@@ -30,8 +33,8 @@ h3{
   font-size: 2vw;
  // font-weight: bold;
   color: var(--mainFontColor);
-  color: rgb(254, 254, 255);
-  margin-bottom: 1hv;
+  color:vars.$base---primary;
+  margin-bottom: 1vh;
  }
 a{
   text-decoration:underline;

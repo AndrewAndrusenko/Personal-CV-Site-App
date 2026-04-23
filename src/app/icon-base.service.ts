@@ -10,6 +10,9 @@ export class IconBaseService {
         'checkbox-line',
         'briefcase-4-fill',
         'check-fill',
+        'group-fill',
+        'account-pin-circle-line',
+        'exchange-box-fill'
     /* 'add-box-fill',
     'add-box-line',
     'arrow-down-fill',
@@ -62,7 +65,7 @@ export class IconBaseService {
     const iconRegistry = inject(MatIconRegistry);
     const sanitizer = inject(DomSanitizer);
     this.iconsStore.forEach(icon=>{
-      iconRegistry.addSvgIcon(icon, sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/'+icon+'.svg'));
+      iconRegistry.addSvgIcon(icon, sanitizer.bypassSecurityTrustResourceUrl('assets/icons/'+icon+'.svg'));
     })
   }
 }
