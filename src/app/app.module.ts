@@ -19,41 +19,34 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'; 
 import { MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AamCoreInfoComponent } from './aam-core-info/aam-core-info.component';
 import { BpProcessChartsComponent } from './bp-process-charts/bp-process-charts.component';
 import { FooterContactComponent } from './footer-contact/footer-contact.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MainMenuComponent,
-    SkillsBoxComponent,
-    AboutSectionComponent,
-    TypingAnimationComponent,
-    TimelineExperienceComponent,
-    ContactMeFormComponent,
-    AamCoreInfoComponent,
-    BpProcessChartsComponent,
-    FooterContactComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTooltipModule,
-    MatSnackBarModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        MainMenuComponent,
+        SkillsBoxComponent,
+        AboutSectionComponent,
+        TypingAnimationComponent,
+        TimelineExperienceComponent,
+        ContactMeFormComponent,
+        AamCoreInfoComponent,
+        BpProcessChartsComponent,
+        FooterContactComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatMenuModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTooltipModule,
+        MatSnackBarModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
