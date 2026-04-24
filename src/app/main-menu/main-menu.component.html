@@ -1,25 +1,25 @@
-<ng-container *ngIf="deviceType==='Mobile'">
+@if (deviceType==='Mobile') {
   <div class="mobile-toolbar-wrapper">
-  <mat-toolbar>
+    <mat-toolbar>
       <button mat-icon-button   [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>
-        <mat-menu #menu="matMenu" class="cust-menu">
-          <button mat-menu-item (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf')">Resume</button>
-          <button mat-menu-item (click)="navigateToSection('skills')">Skills</button>
-          <button mat-menu-item (click)="navigateToSection('experience')">Experience</button>
-          <button mat-menu-item (click)="navigateToSection('aam-core')">Projects</button>
-          <button mat-menu-item (click)="navigateToSection('contact')">Contact</button>
-          <button mat-menu-item> <a href="https://github.com/AndrewAndrusenko" target="_blank" class="gitRefMobile">Github Profile</a></button>
-        </mat-menu>
-      </button>
-      <div class="name-wrap">
+      <mat-menu #menu="matMenu" class="cust-menu">
+        <button mat-menu-item (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf')">Resume</button>
+        <button mat-menu-item (click)="navigateToSection('skills')">Skills</button>
+        <button mat-menu-item (click)="navigateToSection('experience')">Experience</button>
+        <button mat-menu-item (click)="navigateToSection('aam-core')">Projects</button>
+        <button mat-menu-item (click)="navigateToSection('contact')">Contact</button>
+        <button mat-menu-item> <a href="https://github.com/AndrewAndrusenko" target="_blank" class="gitRefMobile">Github Profile</a></button>
+      </mat-menu>
+    </button>
+    <div class="name-wrap">
       <a href="#" (click)="navigateToSection('AAA')">{{myName}}</a>
-      </div>
-    </mat-toolbar>
-  </div>
-</ng-container>
+    </div>
+  </mat-toolbar>
+</div>
+}
 <div class="wrapper">
-  <ng-container *ngIf="deviceType==='Desktop'">
-  <mat-toolbar>
+  @if (deviceType==='Desktop') {
+    <mat-toolbar>
       <div class="desktop-toolbar-wrapper">
         <a href="./" (click)="navigateToSection('AAA')">{{myName}}</a>
         <a href="./" (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf')">Resume</a>
@@ -28,10 +28,10 @@
         <a href="./#AAM-core" (click)="navigateToSection('aam-core')">Projects</a>
         <a href="./#Contact" (click)="navigateToSection('contact')">Contact</a>
         <a href="https://github.com/AndrewAndrusenko" class="gitRef" target="_blank" style=" display: flex; justify-content: center; gap :6px; align-items: center;">
-          Github     
+          Github
           <img #aicon  src="../../assets/social-icons/arrow-right-double-fill.svg" style="width: 28px; height: 28px;" >
         </a>
       </div>
     </mat-toolbar>
-  </ng-container>
+  }
 </div>

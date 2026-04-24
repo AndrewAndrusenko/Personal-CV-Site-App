@@ -12,7 +12,9 @@
     <mat-form-field>
       <input matInput appereance="fill" placeholder="Email" formControlName="email"  >
     </mat-form-field>
-    <p class="m-error" *ngIf="contactForm.invalid&&email?.touched">Required: Please fill in the email address</p>
+    @if (contactForm.invalid&&email?.touched) {
+      <p class="m-error">Required: Please fill in the email address</p>
+    }
     <mat-form-field >
       <input matInput placeholder="Name" formControlName="name" >
     </mat-form-field>
@@ -21,10 +23,10 @@
     </mat-form-field>
     <mat-form-field class="msg">
       <textarea matInput placeholder="Message" formControlName="messageText"></textarea>
-    </mat-form-field> 
+    </mat-form-field>
     <div class="button-wrap">
-      <button 
-        [disabled]="contactForm.invalid" mat-raised-button (click)="sendToTelegram()"  
+      <button
+        [disabled]="contactForm.invalid" mat-raised-button (click)="sendToTelegram()"
         [matTooltipDisabled]="contactForm.valid"
         matTooltip="Disabled: Please fill in the email address" >
         Send

@@ -1,108 +1,108 @@
 <div class="foto-wrap">
-  <ng-container *ngIf="deviceType!=='Desktop'">
+  @if (deviceType!=='Desktop') {
     <img class="main-foto" mat-card-image src="../assets/cyprus_profile2.jpg">
-  </ng-container>
+  }
 </div>
 <div class="about-main-container">
   <section class="about-text-container">
-        <div class="text-title">
-            <div>Hi, I am Andrey Andusenko!</div>
-            <div class="typying"><app-typing-animation></app-typing-animation></div> 
-        </div>
-        <div class="base-color" style="margin-top: 10px;">
-               <span class="accent-color" style="font-weight: 600;">Main stack: </span> 
-               Angular (+RxJs deep), Node.js, PostgreSQL
-        </div>
-        <div style="display: flex;flex-direction: column;gap: 6px;">
-            <div class="item-personal">
-                <mat-icon svgIcon="group-fill" ></mat-icon>
-                    Fully committed full stack developer
-            </div>
-            <div class="item-personal base-color" style="font-weight: 600;">
-                <mat-icon svgIcon="group-fill" ></mat-icon>
-                      I really love what I do
-            </div>
-            <div class="item-personal" >
-                <mat-icon svgIcon="group-fill"></mat-icon>
-                    Creating apps and pushing limits drives me
-            </div>
-        </div>
+    <div class="text-title">
+      <div>Hi, I am Andrey Andusenko!</div>
+      <div class="typying"><app-typing-animation></app-typing-animation></div>
+    </div>
+    <div class="base-color" style="margin-top: 10px;">
+      <span class="accent-color" style="font-weight: 600;">Main stack: </span>
+      Angular (+RxJs deep), Node.js, PostgreSQL
+    </div>
+    <div style="display: flex;flex-direction: column;gap: 6px;">
+      <div class="item-personal">
+        <mat-icon svgIcon="group-fill" ></mat-icon>
+        Fully committed full stack developer
+      </div>
+      <div class="item-personal base-color" style="font-weight: 600;">
+        <mat-icon svgIcon="group-fill" ></mat-icon>
+        I really love what I do
+      </div>
+      <div class="item-personal" >
+        <mat-icon svgIcon="group-fill"></mat-icon>
+        Creating apps and pushing limits drives me
+      </div>
+    </div>
 
-        <div class="projects" style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
-            <div class="projects-title accent-color" 
-            style="font-weight: 600;">Projects:</div>
-            <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
-                <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
-                    <mat-icon svgIcon="briefcase-4-fill" style="width: 32px; height: 32px;"></mat-icon>
-                    <span class="base-color" style="font-weight: 500;">
-                        Business Process & Electronic Document Management System 
-                        
-                </span>
-                </div>
-                <div class="projects-title" style="margin-left: 30px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
-                    <div class="item" style="display: flex; gap: 8px; align-items: center;">
-                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
-                        
-                        Implemented new UI, design model, best practices
-                    </div>
-                    <div class="item"  style="display: flex; gap: 8px;">
-                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+    <div class="projects" style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+      <div class="projects-title accent-color"
+      style="font-weight: 600;">Projects:</div>
+      <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
+        <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
+          <mat-icon svgIcon="briefcase-4-fill" style="width: 32px; height: 32px;"></mat-icon>
+          <span class="base-color" style="font-weight: 500;">
+            Business Process & Electronic Document Management System
 
-                        Deleveloped complex interactive data visualization. And more..
-                    </div>
-
-                </div>
-            </div>
-            <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
-                <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
-                    <mat-icon svgIcon="coins-fill"style="width: 32px; height: 32px;"></mat-icon>
-                    <span class="base-color" style="font-weight: 500;">
-                        Asset Management Platform 
-                    </span>
-                </div>
-                <div class="projects-title" style="margin-left: 30px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
-                    <div class="item" style="display: flex; gap: 8px; align-items: center;">
-                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
-                        Ready-to-go asset management system from scratch
-                    </div>
-                    <div class="item"  style="display: flex; gap: 8px;">
-                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
-                        Comprehensive financial accounting system. 
-                    </div>
-                    <div class="item"  style="display: flex; gap: 8px;">
-                        <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
-                        Full-scale asset management model. And more..
-                    </div>
-                </div>
-            </div>
-            <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
-                <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
-                    <mat-icon svgIcon="exchange-box-fill" style="width: 32px; height: 32px;"></mat-icon>
-                    <span class="base-color" style="font-weight: 500;">
-                        Stock quotes in real time
-                        
-                </span>
-                </div>
-                <div class="projects-title" style="margin-left: 30px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
-                    <div class="item" style="display: flex; gap: 10px; align-items: center;">
-                        <mat-icon svgIcon="check-fill"></mat-icon>
-                        
-                        A real-time processing system with a stream rate of 50 ms
-                    </div>
-                    <div class="item"  style="display: flex; gap: 8px;">
-                        <mat-icon svgIcon="check-fill" ></mat-icon>
-                        WebSockets. Rendering optimization. 
-                    </div>
-                    <div class="item"  style="display: flex; gap: 8px;">
-                        <mat-icon svgIcon="check-fill" ></mat-icon>
-                        Stream management with RxJS buffering, refresh rate settings. And more..
-                    </div>
-
-                </div>
-            </div>
+          </span>
         </div>
+        <div class="projects-title" style="margin-left: 30px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+          <div class="item" style="display: flex; gap: 8px; align-items: center;">
+            <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+
+            Implemented new UI, design model, best practices
+          </div>
+          <div class="item"  style="display: flex; gap: 8px;">
+            <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+
+            Deleveloped complex interactive data visualization. And more..
+          </div>
+
+        </div>
+      </div>
+      <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
+        <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
+          <mat-icon svgIcon="coins-fill"style="width: 32px; height: 32px;"></mat-icon>
+          <span class="base-color" style="font-weight: 500;">
+            Asset Management Platform
+          </span>
+        </div>
+        <div class="projects-title" style="margin-left: 30px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+          <div class="item" style="display: flex; gap: 8px; align-items: center;">
+            <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+            Ready-to-go asset management system from scratch
+          </div>
+          <div class="item"  style="display: flex; gap: 8px;">
+            <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+            Comprehensive financial accounting system.
+          </div>
+          <div class="item"  style="display: flex; gap: 8px;">
+            <mat-icon svgIcon="check-fill" style="width: 20px;"></mat-icon>
+            Full-scale asset management model. And more..
+          </div>
+        </div>
+      </div>
+      <div style="border: 1px solid #C1D3F1; border-radius: 12px;padding: 12px;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51); ">
+        <div class="projects-title" style="display: flex;align-items: center;gap: 8px;">
+          <mat-icon svgIcon="exchange-box-fill" style="width: 32px; height: 32px;"></mat-icon>
+          <span class="base-color" style="font-weight: 500;">
+            Stock quotes in real time
+
+          </span>
+        </div>
+        <div class="projects-title" style="margin-left: 30px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+          <div class="item" style="display: flex; gap: 10px; align-items: center;">
+            <mat-icon svgIcon="check-fill"></mat-icon>
+
+            A real-time processing system with a stream rate of 50 ms
+          </div>
+          <div class="item"  style="display: flex; gap: 8px;">
+            <mat-icon svgIcon="check-fill" ></mat-icon>
+            WebSockets. Rendering optimization.
+          </div>
+          <div class="item"  style="display: flex; gap: 8px;">
+            <mat-icon svgIcon="check-fill" ></mat-icon>
+            Stream management with RxJS buffering, refresh rate settings. And more..
+          </div>
+
+        </div>
+      </div>
+    </div>
   </section>
-  <ng-container *ngIf="deviceType==='Desktop'">
+  @if (deviceType==='Desktop') {
     <img  mat-card-image src="../assets/cyprus_profile2.jpg">
-  </ng-container>
+  }
 </div>
