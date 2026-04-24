@@ -5,9 +5,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ENV } from '../env/env';
 
 @Component({
-  selector: 'app-contact-me-form',
-  templateUrl: './contact-me-form.component.html',
-  styleUrls: ['./contact-me-form.component.scss'],
+    selector: 'app-contact-me-form',
+    templateUrl: './contact-me-form.component.html',
+    styleUrls: ['./contact-me-form.component.scss'],
+    standalone: false
 })
 export class ContactMeFormComponent {
   contactForm: FormGroup

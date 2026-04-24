@@ -2,9 +2,10 @@ import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
-  selector: 'app-main-menu',
-  templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss']
+    selector: 'app-main-menu',
+    templateUrl: './main-menu.component.html',
+    styleUrls: ['./main-menu.component.scss'],
+    standalone: false
 })
 export class MainMenuComponent {
   deviceType:string=''

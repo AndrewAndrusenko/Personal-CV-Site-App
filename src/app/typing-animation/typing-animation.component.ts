@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-typing-animation',
-  templateUrl: './typing-animation.component.html',
-  styleUrls: ['./typing-animation.component.scss']
+    selector: 'app-typing-animation',
+    templateUrl: './typing-animation.component.html',
+    styleUrls: ['./typing-animation.component.scss'],
+    standalone: false
 })
 export class TypingAnimationComponent {
   expertiseSet:string[] =['Full Stack Developer','Financial Expert','Frontend Developer', 'Backend Developer'];

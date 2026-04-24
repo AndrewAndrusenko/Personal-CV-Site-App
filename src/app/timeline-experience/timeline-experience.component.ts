@@ -1,9 +1,10 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
-  selector: 'app-timeline-experience',
-  templateUrl: './timeline-experience.component.html',
-  styleUrls: ['./timeline-experience.component.scss']
+    selector: 'app-timeline-experience',
+    templateUrl: './timeline-experience.component.html',
+    styleUrls: ['./timeline-experience.component.scss'],
+    standalone: false
 })
 export class TimelineExperienceComponent {
   @ViewChildren ('animated') expBox :QueryList<ElementRef>

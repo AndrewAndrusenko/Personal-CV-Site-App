@@ -2,9 +2,10 @@ import { Component, ElementRef, HostListener, QueryList, ViewChildren} from '@an
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { IconBaseService } from './icon-base.service';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent 
 {
