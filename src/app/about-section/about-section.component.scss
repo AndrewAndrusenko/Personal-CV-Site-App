@@ -1,9 +1,107 @@
 @use '../styles/variables.scss' as vars; 
-.base-color {
+.about-main-container {
+    display: flex;
+    & > img {
+        -webkit-box-shadow:0 0 1vw  var(--boxShadowColor);
+        -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
+        box-shadow:0 0 1vw  var(--boxShadowColor);
+        width: 12vw;
+        height: 18vw; 
+        border-radius: 10%;
+        transition: 0.4s ease-in-out;
+    }
+}
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    font-size: 1.5vw;
+    white-space: pre-line;
+    text-align: justify;
+    text-align-last: left;
+    width: 50vw;
+    margin-right: 8vw;
+    line-height:1.8vw; 
+    color: vars.$text---primary ;
+    font-weight: 300;
+
+    & > .personal {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        & > .personal-item {
+            display: flex; 
+            gap: 8px; 
+            align-items: center;
+            min-height: 40px;
+        }
+    }
+    & > .text-title{
+        color:vars.$base---primary ; 
+        font-weight: 200;
+        font-size: 2vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:10px;
+        margin-bottom: 16px;
+    }
+    & > span > a {
+        cursor:pointer;
+        color: vars.$base---primary;
+        font-weight: 400;
+    }
+    & > .projects {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & > .project-container {
+            border: 1px solid vars.$line---extra; 
+            border-radius: vars.$corner-radius--l;
+            padding: vars.$corner-radius--l;
+            box-shadow: vars.$style---shadow---xl;
+            & > .project-title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                & > mat-icon {
+                    width: 32px; 
+                    height: 32px;
+                }
+                & > span {
+                   font-weight: 500;
+                }
+            }
+            & > .project-bullets {
+                margin-left: 30px; 
+                display: flex; 
+                flex-direction: column; 
+                gap: 4px; 
+                margin-top: 6px;
+                & > .project-bullets-item{
+                    display: flex; 
+                    gap: 8px; 
+                    align-items: center;
+                    & > mat-icon {
+                        min-width: 24px;
+                        min-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+ }
+ .base-color {
     color:vars.$base---primary;
 }
 .accent-color {
     color:vars.$base---accent;
+}
+.bold-item {
+    font-weight: 600;
 }
 .foto-wrap {
   display: flex;
@@ -17,60 +115,6 @@
   width: 60%;
   height: 30%; 
   border-radius: 10%;
- // transition: 0.4s ease-in-out;
- }
-.foto-wrap img:hover{
- // transform: scale(1.5);
-}
-.about-main-container {
-    display: flex;
-    & > img {
-        -webkit-box-shadow:0 0 1vw  var(--boxShadowColor);
-        -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
-        box-shadow:0 0 1vw  var(--boxShadowColor);
-        width: 12vw;
-        height: 18vw; 
-        border-radius: 10%;
-        transition: 0.4s ease-in-out;
-        
-    }
-}
-.about-text-container {
-  width: 50vw;
-  margin-right: 8vw;
-  line-height:1.8vw; 
-  color: vars.$text---primary ;
-  font-weight: 300;
- }
-.about-text-container {
-    display: flex;
-    flex-direction: column;
-    gap:8px;
-    font-size: 1.5vw;
-    white-space: pre-line;
-    text-align: justify;
-    text-align-last: left;
-    & > .item-personal{
-         display: flex; 
-         gap: 8px; 
-         align-items: center;
-         min-height: 40px;
-    }
-    & > .text-title{
-        color:vars.$base---primary ; 
-        font-weight: 200;
-        font-size: 2vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap:10px;
-        margin-bottom: 6px;
-    }
-    & > span > a {
-        cursor:pointer;
-        color: vars.$base---primary;
-        font-weight: 400;
-    }
  }
 .typing-mobile{
   display: flex;

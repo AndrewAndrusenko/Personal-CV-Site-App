@@ -12,7 +12,8 @@ export class IconBaseService {
         'check-fill',
         'group-fill',
         'account-pin-circle-line',
-        'exchange-box-fill'
+        'exchange-box-fill',
+        'lock-password-fill'
     /* 'add-box-fill',
     'add-box-line',
     'arrow-down-fill',
