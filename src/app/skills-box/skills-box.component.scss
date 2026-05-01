@@ -1,80 +1,70 @@
 @use '../styles/variables.scss' as vars; 
 .skill-main-container {
-  color: vars.$base---light;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  text-align: center;
+    color: vars.$base---light;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+    & h1{
+        font-size: 2.5vw;
+        font-weight: bold;
+        color: vars.$base---primary;
+    }
+    & h2 {
+      font-size: 1.2vw;
+      line-height: 1.2;
+      color: vars.$base---primary;
+    }
 }
-.skill-main-container h1 {
-  font-size: 2.5vw;
-  font-weight: bold;
-  color: vars.$base---primary;
-}
-.skill-main-container h2 {
-  font-size: 1.2vw;
-  line-height: 1.2;
-color: vars.$base---primary;
 
-}
 .skill-boxes-contrainer {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 4vw;
-  margin-right: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    & h2 {
+        font-size: 2vw;;
+        margin-top: 2%;
+        margin-bottom: 1vh ;
+    }
+    & > .tilt-box-wrap {
+        perspective: 1000px;
+        position: relative;
+        transition: all 0.6s ease-out;
+
+        & > .skill-box {
+            width: 30vw;
+            height: 33vh;
+            border: 1px solid vars.$line---extra; 
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: vars.$style---base-shadow---m;
+            transition: all 0.6s ease-out;
+    
+            & > .skill-item {
+                display:inline-flex;
+                justify-content: center;
+                gap: 6px;
+                margin-left: 0.5vw;
+                margin-bottom: 0.7vw;
+                padding:12px;
+                border: 1px solid vars.$line---extra;
+                border-radius: 15px;
+                align-items: center; 
+                background-color: vars.$base---light;
+                &> img{
+                    width: 36px;
+                    height: 36px;
+                }
+                & > span{
+                    font-size: 1vw;
+                    margin-left: 6px;
+                    color: vars.$base---primary;
+                }
+            }
+        }
+    }
 }
-.skill-boxes-contrainer.centered {
-  margin-top: 2vh;
-  display: flex;
-  justify-content: center;
-}
-.skill-boxes-contrainer h2 {
-  font-size: 2vw;;
-  margin-top: 2%;
-  margin-bottom: 1vh ;
-}
-.tilt-box-wrap {
-  perspective: 1000px;
-  position: relative;
-  transition: all 0.6s ease-out;
-}
-.skill-box {
-  width: 30vw;
-  height: 33vh;
-border: 1px solid #C1D3F1; 
-border-radius: 12px;
-padding: 8px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51);
-  //background-color: vars.$base---primary;
-/*   background-color: transparent;
-  -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
-  -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
-  box-shadow:0 0 1vw  var(--boxShadowColor); */
-  transition: all 0.6s ease-out;
-}
-.skill-item {
-  display:inline-flex;
-  gap: 6px;
-  margin-left: 0.5vw;
-  margin-bottom: 0.7vw;
-  padding-left: 0.4vw;
-  padding-right: 0.4vw;
-  padding-top: 0.4vw;
-  padding-bottom: 0.4vw;
-  border: 1px solid vars.$line---extra;
-  border-radius: 15px;
-  align-items: center; 
-  min-width: 7vw;
-}
-.skill-item img{
-  width: 3vh;
-  height: 3vh;
-}
-.skill-item span{
-  font-size: 1vw;
-  margin-left: 0.4vw;
-  margin-top: 0.4vw;
-  color: vars.$base---primary;
-}
+
 .t_over {
   width: 33.333%;
   height: 33.333%;

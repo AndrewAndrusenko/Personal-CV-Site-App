@@ -2,133 +2,21 @@
   <h1>Hard Skills</h1> 
   <h2 >Here are some of my skills on which I have been working on for the past 5 years.</h2>
   <div class="skill-boxes-contrainer">
-    <div class="tilt-box-wrap">
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <div class="skill-box">
-        <h2>Frontend</h2>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/angularjs-original.svg" alt="angular" >
-          <span>Angular</span> 
+    @for ( skillBox of skillData; track skillBox.title ) {
+        <div class="tilt-box-wrap">
+            @for ( i of [].constructor(9) ; track $index ) {
+                <span class="t_over"></span>
+            }
+            <div class="skill-box">
+                <h2>{{skillBox.title}}</h2>
+                @for ( skill of skillBox.skills ; track skill ) {
+                    <div class="skill-item">
+                      <img [src]="'../assets/skills-logos/' + skill.img" [alt]="skill.alt||skill.name" [style.width]="skill?.width">
+                      <span>{{skill.name}}</span> 
+                    </div>
+                }
+            </div>
         </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/rxjs-1.svg" alt="rxjs" /> 
-          <span>RxJS</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/Typescript.svg" alt="typescript" /> 
-          <span>TypeScript</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/echarts.png" alt="echarts" /> 
-          <span>ECharts</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/javascript1.svg" alt="javascript"  style="border-radius: 10%;"/> 
-          <span>JavaScript</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/HTML5.svg" alt="html" /> 
-          <span>HTML</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/CSS3_logo.svg" alt="css" /> 
-          <span>CSS</span> 
-        </div>
-      </div>
-    </div>
-    <div class="tilt-box-wrap">
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <div class="skill-box">
-        <h2>Backend</h2>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/postgresql.png" alt="postgresql" /> 
-          <span>PostgreSQL</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/Node.svg" alt="nodejs" style="background-color: rgb(222, 221, 221);  border-radius: 5%/15%;  width:5.5vh;"/> 
-          <span>NodeJS</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/ExpressJS1.png" alt="sqlserver" /> 
-          <span>Express</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/passport.svg" alt="passportjs" /> 
-          <span>PassportJS</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/SQL.png" alt="sqlserver"  style=" width:5vh;"/> 
-          <span>SQLServer</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/redis.svg" alt="redis" /> 
-          <span>Redis</span> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="skill-boxes-contrainer centered">
-    <div class="tilt-box-wrap">
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <span class="t_over"></span>
-      <div class="skill-box">
-        <h2>Others</h2>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/vs.svg" alt="vscode" /> 
-          <span>VS Code</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/git.svg" alt="git"/> 
-          <span>Git</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/docker.svg" alt="docker" /> 
-          <span>Docker</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/accounting.png" alt="redis" /> 
-          <span>Accounting</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/bond.png" alt="instruments" /> 
-          <span>BondsShares</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/derivative.png" alt="sqlserver" /> 
-          <span>Derivatives</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/funds.png" alt="hedge funds" /> 
-          <span>HedgeFunds</span> 
-        </div>
-        <div class="skill-item">
-          <img src="../assets/skills-logos/exchange.png" alt="money markets" /> 
-          <span>MoneyMarket</span> 
-        </div>
-      </div>
-    </div>
+    }
   </div>
 </div>

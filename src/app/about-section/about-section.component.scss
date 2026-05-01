@@ -2,9 +2,8 @@
 .about-main-container {
     display: flex;
     & > img {
-        -webkit-box-shadow:0 0 1vw  var(--boxShadowColor);
-        -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
-        box-shadow:0 0 1vw  var(--boxShadowColor);
+
+        box-shadow:0 4px 12px  vars.$base---primary;
         width: 12vw;
         height: 18vw; 
         border-radius: 10%;
@@ -61,8 +60,8 @@
         & > .project-container {
             border: 1px solid vars.$line---extra; 
             border-radius: vars.$corner-radius--l;
-            padding: vars.$corner-radius--l;
-            box-shadow: vars.$style---shadow---xl;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(193, 211, 241, 0.5);
             & > .project-title {
                 display: flex;
                 align-items: center;

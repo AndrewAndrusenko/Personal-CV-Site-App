@@ -18,8 +18,8 @@ $text-success: #45CB78;
 $base---accent: #2563EB;
 $base---primary: #284073;
 $base---secondary: #DBEAFE;
-//$base---light: #FFFFFF;
-$base---light: #1E2938;
+$base---light: #FFFFFF;
+//$base---light: #1E2938;
 $base---light-hover: #F9FCFF;
 $base---warning--secondary: #FEDDDB;
 $base---warning--accent: #F9544A;
@@ -61,5 +61,6 @@ $metric---s: 16px;
 $code---regular: 12px;
 
 /* Effect styles */
+$style---base-shadow---m:  0 4px 12px rgba(193, 211, 241, 0.5);
 $style---shadow---m: 0px 1px 3px rgba(0, 0, 0, 0.1);
 $style---shadow---xl: 0px 1px 3px rgba(0, 0, 0, 0.51);
