@@ -1,44 +1,21 @@
 @use '../app/styles/variables.scss' as vars;
 * {
     font-family: 'Onest' !important;
-}
-#animated-background {
-//  background-image: url("../assets/background/bg-light-valley.jpg");
- // background-image: url("../assets/background/job566-19-a.jpg");
- // background-image: url("../assets/background/aesthetic-ocean3.jpg"); 
-  // background-image: url("../assets/background/marine-composition-with-copyspace.jpg"); 
-  background: vars.$base---light-hover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  // height: 6000px; 
- // background-color: rgb(0, 34, 34);
+    background: vars.$base---light-hover;
 }
 .menu-container {
   position: relative; 
   z-index: 10; 
 }
-.desktop {
- // background-image: url("../assets/background/bg-light-valley.jpg");
+.content {
   margin-left: 14vw;
   margin-right: 14vw;
   overflow: hidden;
 }
-.mobile {
-  margin-left: 0vw;
-  margin-right: 0vw;
-}
-.about-desktop {
+#about {
   display: flex;
   padding-top: 10vh;
   width: 100%;
-}
-.about-mobile {
-  display: flex;
-  padding-top: 10vh;
-  top:0;
-  margin-left: 2vw;
 }
 #aam-core{
   margin-top: 8vh;
@@ -50,18 +27,17 @@
   margin-top: 4vh;
 }
 .reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 2s ease;
-}
-.active {
-  transform: translateY(0px);
-  opacity: 1;
-}
-@media (max-width:1000px) {
-/*   .desktop {
-    margin-left: 1vw;
-    margin-right: 1vw;
-  } */
+    position: relative;
+    opacity: 0;
+    &.is-on-bottom {
+        transform: translateY(150px);
+    }
+    &.is-on-top {
+        transform: translateY(-150px);
+    }
+    &.is-in-view {
+        transform: translateY(0px);
+        opacity: 1;
+        transition: all 2s ease;
+    }
 }

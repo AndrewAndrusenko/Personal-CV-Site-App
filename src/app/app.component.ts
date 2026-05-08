@@ -1,5 +1,4 @@
-import { Component, ElementRef, HostListener, QueryList, ViewChildren} from '@angular/core';
-import { DeviceDetectorService } from 'ngx-device-detector';
+import { Component} from '@angular/core';
 import { IconBaseService } from './services/icon-base.service';
 @Component({
     selector: 'app-root',
@@ -9,40 +8,7 @@ import { IconBaseService } from './services/icon-base.service';
 })
 export class AppComponent 
 {
-  title = 'Andrew Andrusenko';
-  deviceType:string=''
-  name = 'Angular';
-  @ViewChildren('reveal') sectionsToReveal :QueryList<ElementRef>
-  @HostListener('document:scroll', ['$event'])
-  onScrollReveal(event: Event) {  
-    
-     this.sectionsToReveal.forEach(el=>{
-      let elTop = el.nativeElement.getBoundingClientRect().top
-      let windowTop = window.innerHeight
-      if (windowTop - 150 > elTop) {
-        el.nativeElement.classList.add('active')
-      } else {
-        el.nativeElement.classList.remove('active')
-      }
-     })
-    }
-  constructor (
-    private deviceService: DeviceDetectorService,
-    private iconBaseService: IconBaseService,
-  ){
-    switch (true) {
-      case this.deviceService.isDesktop():
-          this.deviceType='Desktop'
-      break;
-      case this.deviceService.isMobile():
-          this.deviceType='Mobile'
-      break;
-      case this.deviceService.isTablet():
-          this.deviceType='Tablet'
-      break;
-      default:
-        this.deviceType='Unknown'
-      break;
-    }
-  }
+  public deviceType:string = ''
+  public viewArea = '150px 0px 0px 0px'
+  constructor (private iconBaseService: IconBaseService){ }
 }

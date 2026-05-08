@@ -9,7 +9,8 @@ import { Directive, ElementRef, Input, Renderer2 } from "@angular/core";
 })
 export class AppIntersectDirective {
     @Input() inViewThreshold = 0.2;
-    public isInView:boolean = false
+    @Input() inViewRootMargin:string ;
+    //@Input() inViewRootMargin:string ;
     private intersectObserver:IntersectionObserver|null = null;
     constructor(
         private el:ElementRef,
@@ -17,14 +18,16 @@ export class AppIntersectDirective {
     ) {}
     ngOnInit(): void {
         this.intersectObserver = new IntersectionObserver(([entry])=>{
-            this.isInView = entry.isIntersecting
-            if (this.isInView) {
+            this.render.removeClass(this.el.nativeElement,'is-on-' + (entry.boundingClientRect.top < 0? 'bottom' : 'top')) 
+            this.render.addClass(this.el.nativeElement,'is-on-' + (entry.boundingClientRect.top < 0? 'top':'bottom')) 
+            if (entry.isIntersecting) {
                 this.render.addClass(this.el.nativeElement,'is-in-view') 
             } else {
                 this.render.removeClass(this.el.nativeElement,'is-in-view') 
             } 
         },{
-            threshold:this.inViewThreshold
+            threshold:this.inViewThreshold,
+            rootMargin:this.inViewRootMargin
         });
         this.intersectObserver.observe(this.el.nativeElement)
     }

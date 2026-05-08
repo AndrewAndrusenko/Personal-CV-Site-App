@@ -23,6 +23,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { AamCoreInfoComponent } from './aam-core-info/aam-core-info.component';
 import { BpProcessChartsComponent } from './bp-process-charts/bp-process-charts.component';
 import { FooterContactComponent } from './footer-contact/footer-contact.component';
+import { AppIntersectDirective } from './directives/intersect-view.directive';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -35,9 +36,11 @@ import { FooterContactComponent } from './footer-contact/footer-contact.componen
         BpProcessChartsComponent,
         FooterContactComponent
     ],
-    bootstrap: [AppComponent], imports: [
+    bootstrap: [AppComponent], 
+    imports: [
         BrowserModule,
         TimelineExperienceComponent,
+        AppIntersectDirective,
         AppRoutingModule,
         MatToolbarModule,
         MatIconModule,

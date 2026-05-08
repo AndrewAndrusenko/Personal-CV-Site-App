@@ -13,7 +13,6 @@ interface IProjects {
     standalone: false
 })
 export class AboutSectionComponent {
-    @Input() deviceType:string;
     public projectsData:IProjects[] = []
     constructor (private viewportScroller:ViewportScroller) {
         this.projectsData = [

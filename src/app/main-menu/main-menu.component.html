@@ -1,4 +1,4 @@
-@if (deviceType==='Mobile') {
+<!-- @if (deviceType==='Mobile') {
   <div class="mobile-toolbar-wrapper">
     <mat-toolbar>
       <button mat-icon-button   [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>
@@ -16,9 +16,8 @@
     </div>
   </mat-toolbar>
 </div>
-}
+} -->
 <div class="wrapper">
-  @if (deviceType==='Desktop') {
     <mat-toolbar>
       <div class="desktop-toolbar-wrapper">
         <a href="./" (click)="navigateToSection('AAA')">{{myName}}</a>
@@ -33,5 +32,4 @@
         </a>
       </div>
     </mat-toolbar>
-  }
 </div>

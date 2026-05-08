@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@use './app//styles//variables.scss' as vars;
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-:root {
-  --mainFontColor: rgb(183, 174, 185);
-  --boxShadowColor: rgb(18, 18, 18);
 
+:root {
+  --boxShadowColor: rgb(18, 18, 18);
 }
 * {
   font-family: "Onest" !important;
@@ -14,6 +14,19 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow: auto;
+    &::-webkit-scrollbar-track {
+      background-color:vars.$base---light-hover;
+    }
+    &::-webkit-scrollbar {
+        -webkit-box-shadow: none;
+        width:6px  !important;
+    }
+    &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: none;
+        border: 60px solid vars.$base---primary;
+        border-radius: 60px;
+        width:6px ;
+    }
 
  }
 .customm-icon {

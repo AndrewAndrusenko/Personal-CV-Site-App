@@ -20,10 +20,8 @@
     "@angular/platform-browser": "^20.3.19",
     "@angular/platform-browser-dynamic": "^20.3.19",
     "@angular/router": "^20.3.19",
-    "ngx-device-detector": "^10.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "vanta": "^0.5.10",
     "zone.js": "~0.15.1"
   },
   "devDependencies": {

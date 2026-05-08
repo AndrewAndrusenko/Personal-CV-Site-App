@@ -1,24 +1,24 @@
-<div id="animated-background" class="">
+<div>
   <div class="menu-container"> 
     <app-main-menu></app-main-menu>
   </div>
-  <div [ngClass]="deviceType==='Desktop'? 'desktop':'mobile'">
-    <section id="about" [ngClass]="deviceType==='Desktop'? 'about-desktop':'about-mobile'">
-      <app-about-section [deviceType]="deviceType"></app-about-section>
+  <div class="content">
+    <section id="about">
+      <app-about-section ></app-about-section>
     </section>
-    <section #reveal id="skills" class="reveal">
+    <section id="skills" appComponentInView [inViewThreshold]="0.15" [inViewRootMargin]="viewArea" class="reveal">
       <app-skills-box></app-skills-box>  
     </section>
-    <section #reveal id="experience" class="reveal">
+    <section id="experience" appComponentInView [inViewThreshold]="0.05" [inViewRootMargin]="viewArea" class="reveal">
       <app-timeline-experience> </app-timeline-experience>
     </section>
-    <section #reveal id="aam-core" class="reveal">
+    <section id="aam-core" appComponentInView [inViewThreshold]="0.10" [inViewRootMargin]="viewArea" class="reveal">
       <app-aam-core-info></app-aam-core-info>
     </section>
-    <section  #reveal id="bp-charts" class="BP-charts-section reveal" >
+    <section id="bp-charts" appComponentInView [inViewThreshold]="0.15" [inViewRootMargin]="viewArea" class="BP-charts-section reveal" >
       <app-bp-process-charts></app-bp-process-charts>
     </section>
-    <section  #reveal id="contact" class="reveal contact-me-section" >
+    <section id="contact" appComponentInView [inViewThreshold]="0.15" [inViewRootMargin]="viewArea" class="reveal contact-me-section" >
       <app-contact-me-form></app-contact-me-form>
     </section>
     <app-footer-contact></app-footer-contact>
