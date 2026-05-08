@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChildren} from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { IconBaseService } from './icon-base.service';
+import { IconBaseService } from './services/icon-base.service';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',

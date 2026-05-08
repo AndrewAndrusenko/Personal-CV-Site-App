@@ -30,15 +30,15 @@ import { FooterContactComponent } from './footer-contact/footer-contact.componen
         SkillsBoxComponent,
         AboutSectionComponent,
         TypingAnimationComponent,
-        TimelineExperienceComponent,
         ContactMeFormComponent,
         AamCoreInfoComponent,
         BpProcessChartsComponent,
         FooterContactComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent], imports: [
+        BrowserModule,
+        TimelineExperienceComponent,
         AppRoutingModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatIconModule,
         MatMenuModule,

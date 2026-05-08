@@ -134,6 +134,14 @@ export class SkillsBoxComponent {
         ];
         let OtherSkills:ISkill[] = [
             {
+                name:'Git',
+                img:'git.svg'
+            },
+            {
+                name:'VS Code',
+                img:'vs.svg'
+            },
+            {
                 name:'HedgeFunds',
                 img:'funds.png',
             },
@@ -152,18 +160,6 @@ export class SkillsBoxComponent {
             {
                 name:'MoneyMarket',
                 img:'exchange.png'
-            },
-            {
-                name:'Git',
-                img:'git.svg'
-            },
-            {
-                name:'VS Code',
-                img:'vs.svg'
-            },
-            {
-                name:'Docker',
-                img:'docker-icon.png'
             },
         ];
 
