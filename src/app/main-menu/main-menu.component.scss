@@ -1,96 +1,30 @@
 @use '../styles/variables.scss' as vars; 
-.mobile-toolbar-wrapper {
-  display: flex;
-  width: 100vw;
-
-}
-.name-wrap {
-  width: 86vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 6vh;
-}
-.mobile-toolbar-wrapper mat-toolbar{
-  height: 6vh;
-  color: vars.$base---primary;
-}
-.mobile-toolbar-wrapper a {
-  color:  vars.$base---primary;
-  text-decoration:none;
-  vertical-align: middle;
-}
-::ng-deep .cust-menu {
-  background-color:  rgb(18, 39, 83,0.5); 
-  width: 100vw;
-}
-.mat-menu-item {
-  color:aliceblue;
-  font-size: 2.5vh;
-}
-.wrapper {
-  width: 100%; 
-  display: flex; 
-  justify-content:center;
-}
-.mat-toolbar {
-  margin-top: 0.2vh;
-  background-color:vars.$base---secondary;
-  border-radius: vars.$corner-radius--xl;
-  border-radius: 6px;
-  border: unset;
-  position: fixed;
-  top:0;
-  width: 80vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  height: 7vh;
-
-}
-.desktop-toolbar-wrapper {
-    display: inline-flex; 
-    width: 80vw;
-    justify-content: space-around;
-}
-.desktop-toolbar-wrapper a {
-  color:vars.$base---primary;
-  text-decoration:none;
-  font-size: 1.1vw;
-  font-weight: 300;
-  opacity: 1;
-  
-}
-.desktop-toolbar-wrapper a:hover {
-  color:  vars.$base---light;
-  transform: scale(1.05);
-}
-.gitRef {
-  font-size: large; 
-  padding-left:1%;
-  padding-right: 1%;
-}
-.gitRefMobile {
-  color:aliceblue;
-  font-size: 2.5vh;
-}
-@media (min-width:2000px) {
-  .mat-toolbar {
-    width: 62vw;
-  }
-}
-@media (max-width:1000px) {
-  .desktop-toolbar-wrapper a {
-    font-size: 1.4vw;
-  }
-  .mat-toolbar {
-    width: 98vw;
-  }
-  .desktop-toolbar-wrapper {
-    width: 96vw;
-  }
-@media (max-width:480px) {
-  .mat-toolbar {
-    width: 100vw;
-  }
-}
+.aa-menu {
+    display: flex; 
+    justify-content:space-around;
+    align-items: center;
+    background-color:vars.$base---secondary;
+    border-radius: vars.$corner-radius--m;
+    position: fixed;
+    top:0;
+    height: 7vh;
+    width: 88vw; 
+    margin-right: 6vw;
+    margin-left: 6vw;
+    margin-top: 0.2vh;
+    &-href {
+        color:  vars.$base---primary;
+        text-decoration:none;
+        font-size: 1.1vw;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        gap:8px
+    }
+    &-contact {
+        margin-left: -48px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }

@@ -1,10 +1,12 @@
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
     selector: 'app-main-menu',
     templateUrl: './main-menu.component.html',
     styleUrls: ['./main-menu.component.scss'],
-    standalone: false
+    imports:[CommonModule, MatIconModule],
+    standalone: true
 })
 export class MainMenuComponent {
   myName:string="<Andrey/Andrusenko>"

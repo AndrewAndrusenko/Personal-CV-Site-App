@@ -6,13 +6,16 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class IconBaseService {
     public iconsStore:Set<string> = new Set([
-        'coins-fill',
-        'checkbox-line',
+        'account-pin-circle-line',
         'briefcase-4-fill',
         'check-fill',
+        'checkbox-line',
+        'coins-fill',
+        'github-fill',
         'group-fill',
-        'account-pin-circle-line',
         'exchange-box-fill',
+        'facebook-fill',
+        'linkedin-box-fill',
         'lock-password-fill'
     ])
     constructor () {

@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @use './app//styles//variables.scss' as vars;
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
@@ -29,20 +28,22 @@ html, body {
     }
 
  }
-.customm-icon {
-  width: 2vw;
-  height: 4vh;
+.mdc-tooltip__surface {
+    color:vars.$base---primary !important;
+    background: vars.$base---secondary !important;
+    font-family: vars.$font-family !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    border-radius: 6px !important;
+    padding: 8px;
 }
-.navigate-button {
-  background-color: rgb(44, 64, 61);
-  padding:0px;
-  margin: 0px;
-  font:inherit;
-  color:inherit;
-} 
-.snackbar-success {
-  background-color: rgb(91, 143, 180);
-  color: rgb(232, 233, 238);
-  white-space: pre-wrap;
-  padding: 1%;
+.mdc-snackbar__surface {
+    border-radius: 6px !important;
+    background-color:vars.$base---secondary !important;
+    color: vars.$base---primary !important;
+    white-space: pre-wrap !important;
+    border-radius: vars.$corner-radius--m !important;
+}
+.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+    --mat-button-text-state-layer-color: #DBEAFE !important;
 }

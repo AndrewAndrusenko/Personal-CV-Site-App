@@ -1,5 +1,4 @@
 @use '../styles/variables.scss' as vars; 
-
 .title-wrap {
   text-align: center;
   color: vars.$base---primary;
@@ -84,7 +83,11 @@
  // background-image: linear-gradient(to right, rgb(44, 89, 118), rgb(49, 182, 113));
  background-color: vars.$base---primary;
   border: 0;
+  border-radius: vars.$corner-radius--s;
   color: vars.$base---light-hover;
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 @media (max-width:1000px) {
   .m-h1{
