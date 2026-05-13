@@ -6,13 +6,13 @@
     @for (expItem of this.expData; track expItem.company) {
         <div  class="item-box" [class.item-box-left]="$even" [class.item-box-right]="$odd" >
           <p class="period-info">{{expItem.period2||expItem.period}}</p>
-          <img  appComponentInView [inViewThreshold]="0.5" class="timeline-img" [src]="'../assets/companies-logos/'+ expItem.logo" 
+          <img  appComponentInView [inViewThreshold]="0.5" class="timeline-img" [src]="'assets/companies-logos/'+ expItem.logo" 
           [style.background-color]="expItem.logo_backgroud"
           >
           <div  appComponentInView [inViewThreshold]="0.45" class="item-content" [class.item-content-left]="$even" [class.item-content-right]="$odd">
             <div class="header">
               <img class="logo" 
-                [src]="'../assets/companies-logos/'+ expItem.logo" 
+                [src]="'assets/companies-logos/'+ expItem.logo" 
                 [style.padding]="expItem.padding"
                 [style.background-color]="expItem.logo_backgroud">
               <div class="info" >

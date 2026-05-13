@@ -11,7 +11,7 @@
                 <h2>{{skillBox.title}}</h2>
                 @for ( skill of skillBox.skills ; track skill ) {
                     <div class="skill-item">
-                      <img [src]="'../assets/skills-logos/' + skill.img" [alt]="skill.alt||skill.name" [style.width]="skill?.width">
+                      <img [src]="'assets/skills-logos/' + skill.img" [alt]="skill.alt||skill.name" [style.width]="skill?.width">
                       <span>{{skill.name}}</span> 
                     </div>
                 }

@@ -12,7 +12,7 @@ export class FooterContactComponent {
   canvas: HTMLCollectionOf<HTMLCanvasElement>;
   canvas2: HTMLCanvasElement;
   openLink() {
-  window.open('../assets/BP Extended AAM-Buisness process extended.pdf','_blank')
+  window.open('assets/BP Extended AAM-Buisness process extended.pdf','_blank')
   }
   stopAnimation() {
     this.canvas = document.getElementsByClassName('vanta-canvas') as HTMLCollectionOf<HTMLCanvasElement>

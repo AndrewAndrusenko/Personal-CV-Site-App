@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201",
-    "build": "ng build",
+    "build": "ng build --base-href /apps/cv-site/",
+    "postbuild":"gzipper compress ./dist/my-site-app/browser --brotli --threshold 10240 --remove-larger",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -29,6 +30,7 @@
     "@angular/cli": "~20.3.24",
     "@angular/compiler-cli": "^20.3.19",
     "@types/jasmine": "~4.3.0",
+    "gzipper": "^8.2.1",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
