@@ -27,7 +27,6 @@ import { AppIntersectDirective } from './directives/intersect-view.directive';
 
 @NgModule({ declarations: [
         AppComponent,
-        MainMenuComponent,
         SkillsBoxComponent,
         AboutSectionComponent,
         TypingAnimationComponent,
@@ -39,6 +38,7 @@ import { AppIntersectDirective } from './directives/intersect-view.directive';
     bootstrap: [AppComponent], 
     imports: [
         BrowserModule,
+        MainMenuComponent,
         TimelineExperienceComponent,
         AppIntersectDirective,
         AppRoutingModule,
