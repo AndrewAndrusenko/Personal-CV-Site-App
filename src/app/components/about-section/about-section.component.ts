@@ -1,5 +1,7 @@
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, NgOptimizedImage, ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { AppTypingAnimationComponent } from '../typing-animation/typing-animation.component';
+import { MatIconModule } from '@angular/material/icon';
 interface IProjects {
     id:number,
     title:string,
@@ -10,7 +12,12 @@ interface IProjects {
     selector: 'app-about-section',
     templateUrl: './about-section.component.html',
     styleUrls: ['./about-section.component.scss'],
-    standalone: false
+    imports:[
+        MatIconModule,
+        CommonModule,
+        NgOptimizedImage,
+        AppTypingAnimationComponent
+    ]
 })
 export class AboutSectionComponent {
     public projectsData:IProjects[] = []

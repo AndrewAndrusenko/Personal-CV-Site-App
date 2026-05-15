@@ -4,10 +4,9 @@ import { Subject } from 'rxjs';
 @Component({
     selector: 'app-typing-animation',
     templateUrl: './typing-animation.component.html',
-    styleUrls: ['./typing-animation.component.scss'],
-    standalone: false
+    styleUrls: ['./typing-animation.component.scss']
 })
-export class TypingAnimationComponent {
+export class AppTypingAnimationComponent {
   expertiseSet:string[] =['Full Stack Developer','Financial Expert','Frontend Developer', 'Backend Developer'];
   nextExpert:Subject<number> = new Subject();
   expertInd:number=0;

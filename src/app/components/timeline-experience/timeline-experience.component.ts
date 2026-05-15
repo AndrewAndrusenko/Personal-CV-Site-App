@@ -1,6 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { Component} from '@angular/core';
-import { AppIntersectDirective } from '../directives/intersect-view.directive';
+import { AppIntersectDirective } from '../../directives/intersect-view.directive';
 interface IExperience {
     company:string,
     logo:string,
@@ -15,8 +14,7 @@ interface IExperience {
     selector: 'app-timeline-experience',
     templateUrl: './timeline-experience.component.html',
     styleUrls: ['./timeline-experience.component.scss'],
-    imports:[CommonModule, AppIntersectDirective],
-    standalone: true
+    imports:[AppIntersectDirective],
 })
 export class TimelineExperienceComponent {
     public expData:IExperience[]

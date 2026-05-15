@@ -1,13 +1,17 @@
-@use '../styles/variables.scss' as vars; 
+@use '../../styles/variables.scss' as vars; 
 .about-main-container {
     display: flex;
-    & > img {
-
+    & > .foto-wrap {
+        position: relative;
         box-shadow:0 4px 12px  vars.$base---primary;
         width: 12vw;
         height: 18vw; 
-        border-radius: 10%;
-        transition: 0.4s ease-in-out;
+        border-radius: vars.$corner-radius--l;
+        & > img {
+            object-fit: cover;
+            border-radius: vars.$corner-radius--l;
+        }
+
     }
 }
 .about-text-container {
@@ -102,19 +106,8 @@
 .bold-item {
     font-weight: 600;
 }
-.foto-wrap {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.foto-wrap img{
-  -webkit-box-shadow:0 0 3vw  var(--boxShadowColor);
-  -moz-box-shadow: 0 0 3vw  var(--boxShadowColor);
-  box-shadow:0 0 3vw  var(--boxShadowColor);
-  width: 60%;
-  height: 30%; 
-  border-radius: 10%;
- }
+
+
 .typing-mobile{
   display: flex;
   justify-content: center;

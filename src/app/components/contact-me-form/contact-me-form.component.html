@@ -27,8 +27,9 @@
     <div class="button-wrap">
       <button
         [disabled]="contactForm.invalid" mat-raised-button (click)="sendToTelegram()"
+        matTooltip="Disabled: Please fill in the email address" 
         [matTooltipDisabled]="contactForm.valid"
-        matTooltip="Disabled: Please fill in the email address" >
+        >
         {{contactForm.valid? 'Send' : 'Send: please fill in the email address '}}
       </button>
     </div>

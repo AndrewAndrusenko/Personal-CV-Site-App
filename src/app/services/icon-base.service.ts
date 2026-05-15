@@ -18,11 +18,11 @@ export class IconBaseService {
         'linkedin-box-fill',
         'lock-password-fill'
     ])
-    constructor () {
+    prepareIcons() {
         const iconRegistry = inject(MatIconRegistry);
         const sanitizer = inject(DomSanitizer);
         this.iconsStore.forEach(icon=>{
             iconRegistry.addSvgIcon(icon, sanitizer.bypassSecurityTrustResourceUrl('assets/icons/'+icon+'.svg'));
         })
-  }
+    }
 }

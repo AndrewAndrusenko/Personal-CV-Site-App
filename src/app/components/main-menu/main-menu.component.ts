@@ -1,11 +1,15 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
     selector: 'app-main-menu',
     templateUrl: './main-menu.component.html',
     styleUrls: ['./main-menu.component.scss'],
-    imports:[CommonModule, MatIconModule],
+    imports:[
+        MatIconModule,
+        MatTooltipModule
+    ],
     standalone: true
 })
 export class MainMenuComponent {

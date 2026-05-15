@@ -1,4 +1,4 @@
-@use '../styles/variables.scss' as vars; 
+@use '../../styles/variables.scss' as vars; 
 .title-wrap {
   text-align: center;
   color: vars.$base---primary;
@@ -20,9 +20,6 @@
 }
 .contact-me-wrap form {
   display: grid;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--mainFontColor);
   border-radius: 2vw/2vw;
   background-color:vars.$base---secondary;
   padding: 1vw;
