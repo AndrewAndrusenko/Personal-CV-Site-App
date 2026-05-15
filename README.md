@@ -1,6 +1,6 @@
-# My Personal Site code
+# My personal site code
 
-This project has been successfully migrated to [Angular CLI](https://github.com/angular/angular-cli) version 20.3.19.
+This project has been successfully migrated to [Angular CLI](https://github.com/angular/angular-cli) version 20.3.19. 
 
 ## Development server
 
