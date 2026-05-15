@@ -1,6 +1,6 @@
-# MySiteApp
+# My Personal Site code
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+This project has been successfully migrated to [Angular CLI](https://github.com/angular/angular-cli) version 20.3.19.
 
 ## Development server
 
