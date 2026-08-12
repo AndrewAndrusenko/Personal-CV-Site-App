@@ -1,53 +1,86 @@
 <div class="about-main-container">
-    <section class="about-text-container">
-        <div class="accent-color" style="margin-bottom: 10px;">Site updates in progress...</div>
-        <div class="text-title">
-            <div>Hi, I am Andrey Andusenko!</div>
-            <div class="typying"><app-typing-animation></app-typing-animation></div>
-        </div>
-        <div class="base-color">
-            <span class="accent-color bold-item">Main stack: </span>
-            Angular (+RxJs deep), Node.js, PostgreSQL
-            <span class=" base-color bold-item">
-                (English - C1)
-
-            </span> 
-        </div>
-        <div class="personal">
-            <div class="personal-item">
-            <mat-icon svgIcon="group-fill" ></mat-icon>
-            Fully committed full stack developer
-            </div>
-            <div class="personal-item base-color bold-item">
-            <mat-icon svgIcon="group-fill" ></mat-icon>
-            I really love what I do
-            </div>
-            <div class="personal-item" >
-            <mat-icon svgIcon="group-fill"></mat-icon>
-            Creating apps and pushing limits drives me
-            </div>
-        </div>
-        <div class="projects">
-            <div class="accent-color bold-item">Projects:</div>
-            @for (project of this.projectsData ; track project.id ) {
-                <div class="project-container">
-                    <div class="project-title">
-                        <mat-icon [svgIcon]="project.icon"></mat-icon>
-                        <span class="base-color">{{project.title}}</span>
-                    </div>
-                    <div class="project-bullets">
-                        @for ( bullet of project.bullets ; track bullet ) {
-                            <div class="project-bullets-item" >
-                            <mat-icon svgIcon="check-fill" ></mat-icon>
-                                {{bullet}}
-                            </div>
-                        }
-                    </div>
-                </div>
-            }
-        </div>
-    </section>
-    <div class="foto-wrap">
-        <img  mat-card-image ngSrc="assets/cyprus_profile2.jpg" priority fill sizes="100vw">
+  <section class="about-text-container">
+    <div class="accent-color" style="margin-bottom: 10px">
+      Site updates in progress...
     </div>
+    <div class="text-title">
+      <div>Hi, I am Andrey Andusenko!</div>
+      <div class="typying"><app-typing-animation></app-typing-animation></div>
+    </div>
+    <div class="base-color">
+      <span class="accent-color bold-item">Main stack: </span>
+      Angular (+RxJs deep), Node.js, PostgreSQL
+      <span class="base-color bold-item"> (English - C1) </span>
+    </div>
+    <div class="personal">
+      <div class="personal-item">
+        <mat-icon svgIcon="group-fill"></mat-icon>
+        Fully committed full stack developer
+      </div>
+      <div class="personal-item base-color bold-item">
+        <mat-icon svgIcon="group-fill"></mat-icon>
+        I really love what I do
+      </div>
+      <div class="personal-item">
+        <mat-icon svgIcon="group-fill"></mat-icon>
+        Creating apps and pushing limits drives me
+      </div>
+    </div>
+    <div class="projects">
+      <div class="accent-color bold-item">Projects:</div>
+      @for (project of this.projectsData; track project.id) {
+        <div class="project-container">
+          <div class="project-title">
+            <mat-icon [svgIcon]="project.icon"></mat-icon>
+            <span class="base-color">{{ project.title }}</span>
+          </div>
+          <div class="project-bullets">
+            @for (bullet of project.bullets; track bullet) {
+              <div class="project-bullets-item">
+                <mat-icon svgIcon="checkbox-circle-fill"></mat-icon>
+                <span style="line-height: normal; width: 90%">
+                  {{ bullet }}
+                </span>
+              </div>
+            }
+          </div>
+          <div class="project-links">
+            <div class="project-demo">
+              @for (demo of project.demo_urls; track demo) {
+                <div class="demo-item">
+                  <mat-icon svgIcon="mac-fill"></mat-icon>
+                  <a [href]="demo.url" target="_blank">
+                    Live Demo: {{ demo.label }}
+                  </a>
+                </div>
+              }
+            </div>
+            <div class="project-demo">
+              @for (repo of project.repositories; track repo) {
+                <div class="demo-item">
+                  <mat-icon svgIcon="github-fill"></mat-icon>
+                  @if (repo.repository_private) {
+                    <div>Code Repository: {{ repo.repository_text }}</div>
+                  } @else {
+                    <a [href]="repo.repository_url" target="_blank">
+                      Code Repository: {{ repo.repository_text }}
+                    </a>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+  <div class="foto-wrap">
+    <img
+      mat-card-image
+      ngSrc="assets/cyprus_profile2.jpg"
+      priority
+      fill
+      sizes="100vw"
+    />
+  </div>
 </div>

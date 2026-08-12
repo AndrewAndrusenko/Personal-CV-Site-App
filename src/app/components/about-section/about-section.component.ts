@@ -2,9 +2,20 @@ import { CommonModule, NgOptimizedImage, ViewportScroller } from '@angular/commo
 import { Component, Input } from '@angular/core';
 import { AppTypingAnimationComponent } from '../typing-animation/typing-animation.component';
 import { MatIconModule } from '@angular/material/icon';
+interface IDemoUrl {
+  url:string,
+  label:string
+}
+interface IRepository {
+    repository_private:boolean,
+    repository_text?:string
+    repository_url?:string,
+}
 interface IProjects {
     id:number,
     title:string,
+    demo_urls:IDemoUrl[],
+    repositories:IRepository[]
     icon:string,
     bullets:string[]
 }
@@ -26,6 +37,22 @@ export class AboutSectionComponent {
             {
                 id:1,
                 title:'Business Process & Electronic Document Management System',
+                demo_urls:[
+                  {
+                    label:'Demo Company 1 Instance',
+                    url:'https://ppklrx85-5001.euw.devtunnels.ms/apps/crm1/',
+                  },
+                  {
+                    label:'Demo Bank 2 Instance',
+                    url:'https://ppklrx85-5001.euw.devtunnels.ms/apps/crm2/',
+                  }
+                ],
+                repositories:[
+                  {
+                    repository_private:true,
+                    repository_text:'Private (Available for live review during interviews)',
+                  }
+                ],
                 icon:'briefcase-4-fill',
                 bullets:[
                     'Deleveloped in-house interactive data visualization library',
@@ -36,6 +63,18 @@ export class AboutSectionComponent {
             {
                 id:2,
                 title:'Asset Management Platform',
+                demo_urls:[
+                  {
+                    label:'https://ppklrx85-5001.euw.devtunnels.ms/apps/aam/',
+                    url:'https://ppklrx85-5001.euw.devtunnels.ms/apps/aam/',
+                  }
+                ],
+                repositories:[
+                  {
+                    repository_private:true,
+                    repository_text:'Private (Available for live review during interviews)',
+                  }
+                ],
                 icon:'coins-fill',
                 bullets:[
                     'Ready-to-go asset management system from scratch',
@@ -46,6 +85,25 @@ export class AboutSectionComponent {
             {
                 id:3,
                 title:'Stock quotes in real time',
+                demo_urls:[
+                  {
+                    label:'https://ppklrx85-5001.euw.devtunnels.ms/apps/rtq/',
+                    url:'https://ppklrx85-5001.euw.devtunnels.ms/apps/rtq/',
+                  }
+                ],
+                repositories:[
+                  {
+                    repository_private:false,
+                    repository_text:'Main - Frontend-RealTime-StockQuotes-WSS',
+                    repository_url:'https://github.com/AndrewAndrusenko/RealTime-StockQuotes-WSS-Frontend',
+                  },
+                  {
+                    repository_private:false,
+                    repository_text:'Supporting - Backend-RealTime-StockQuotes-WSS',
+                    repository_url:'https://github.com/AndrewAndrusenko/RealTime-StockQuotes-WS-Backend'
+                  },
+
+                ],
                 icon:'exchange-box-fill',
                 bullets:[
                     'A real-time processing system with a stream rate of 50 ms',
@@ -56,6 +114,24 @@ export class AboutSectionComponent {
             {
                 id:4,
                 title:'Flexible JWT authentication server',
+                demo_urls:[
+                  {
+                    label:'https://ppklrx85-5001.euw.devtunnels.ms/apps/ssngrx/',
+                    url:'https://ppklrx85-5001.euw.devtunnels.ms/apps/ssngrx/',
+                  }
+                ],
+                repositories:[
+                  {
+                    repository_private:false,
+                    repository_text:'Auth-Server-Frontend',
+                    repository_url:'https://github.com/AndrewAndrusenko/Auth-Server-Frontend',
+                  },
+                  {
+                    repository_private:false,
+                    repository_text:'Auth-Server-Backend',
+                    repository_url:'https://github.com/AndrewAndrusenko/Auth-Server-Backend',
+                  }
+                ],
                 icon:'lock-password-fill',
                 bullets:[
                     'The access and refresh token pattern',

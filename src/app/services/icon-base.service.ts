@@ -16,7 +16,9 @@ export class IconBaseService {
         'exchange-box-fill',
         'facebook-fill',
         'linkedin-box-fill',
-        'lock-password-fill'
+        'lock-password-fill',
+        'mac-fill',
+        'checkbox-circle-fill'
     ])
     prepareIcons() {
         const iconRegistry = inject(MatIconRegistry);
