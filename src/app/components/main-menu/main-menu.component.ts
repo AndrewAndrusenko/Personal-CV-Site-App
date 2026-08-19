@@ -24,10 +24,10 @@ export class MainMenuComponent {
     this.menuItems = [
       {
         label: '<Andrey/Andrusenko>',
-        href: './',
+        href: './#about',
         icon: 'shake-hands-fill',
         handler: this.navigateToSection,
-        arg: 'AAA',
+        arg: 'about',
       },
       {
         label: 'Resume',
@@ -38,21 +38,21 @@ export class MainMenuComponent {
       },
       {
         label: 'Skills',
-        href: './#Skills',
+        href: './#skills',
         icon: 'lightbulb-fill',
         handler: this.navigateToSection,
         arg: 'skills',
       },
       {
         label: 'Experience',
-        href: './#Experience',
+        href: './#experience',
         icon: 'graduation-cap-fill',
         handler: this.navigateToSection,
         arg: 'experience',
       },
       {
         label: 'Projects',
-        href: './#AAM-core',
+        href: './#aam-core',
         icon: 'mac-fill',
         handler: this.navigateToSection,
         arg: 'aam-core',
