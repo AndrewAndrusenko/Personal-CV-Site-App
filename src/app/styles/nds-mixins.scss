@@ -1,0 +1,183 @@
+@use '../styles/variables.scss';
+@mixin nds-buttons {
+
+  .button-icon {
+    //width:100%;
+    max-width:240px;
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    font-family:variables.$font-family !important ;
+    font-size: variables.$body---m---regular !important;
+    font-weight: variables.$body--regular !important;
+    font-style: normal !important;
+    line-height: 20px !important;
+    cursor: pointer;
+    &.size-xxl{
+      //min-width: fit-content;
+      min-width: 142px;
+      min-height: 48px;
+      gap: 10px;
+      padding-left: 24px;
+      padding-right: 24px;
+      border-radius: 10px;
+      &>.mat-icon{
+        width: 20px;
+        height: 20px;
+      }
+      &.icononly{
+        width: 48px;
+      }
+    }
+    &.size-xl{
+      min-width: 140px;
+      height: 44px;
+      gap: 8px;
+      padding-left: 24px;
+      padding-right: 24px;
+      border-radius: 9px;
+      &>.mat-icon{
+        width: 20px;
+        height: 20px;
+      }
+      &.icononly{
+        width: 44px;
+      }
+    }
+    &.size-l{
+      min-width: 116px;
+      min-height: 36px;
+      max-height: 36px;
+      gap: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 8px;
+      &>.mat-icon{
+        width: 20px;
+        height: 20px;
+      }
+      &.icononly{
+        width: 36px;
+      }
+    }
+    &.size-m{
+      min-width: fit-content;
+      min-height: 28px;
+      max-height: 28px;
+      gap: 6px;
+      padding-left: 12px;
+      padding-right: 12px;
+      border-radius: 7px;
+      &>.mat-icon{
+        width: 18px;
+        height: 18px;
+      }
+      &.icononly{
+        width: 28px;
+      }
+    }
+    &.size-s{
+      min-width: fit-content;
+      min-height: 24px;
+      gap: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border-radius: 6px;
+      &>.mat-icon{
+        width: 16px;
+        height: 16px;
+      }
+      &.icononly{
+        width: 24px;
+      }
+    }
+    &.size-xs{
+      //min-width: fit-content;
+      //min-width: 78px;
+      max-height: 20px;
+      font-size: variables.$body---s---regular !important;
+      gap: 4px;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-radius: 5px;
+      &>.mat-icon{
+        width: 14px;
+        height: 14px;
+      }
+      &.icononly{
+        width: 26px;
+      }
+    }
+    &.accent-button{
+      color: variables.$text---light ;
+      background: variables.$base---accent;
+      border: 1px solid variables.$base---accent;
+      &>.mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: brightness(0) saturate(100%) invert(96%) sepia(96%) saturate(16%) hue-rotate(291deg) brightness(105%) contrast(105%);
+      }
+    }
+    &.primary-button{
+      color: variables.$text---light ;
+      background: variables.$base---primary;
+      border: 1px solid variables.$base---primary;
+      &>.mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: brightness(0) saturate(100%) invert(96%) sepia(96%) saturate(16%) hue-rotate(291deg) brightness(105%) contrast(105%);
+      }
+    }
+    &.secondary-button{
+      color: variables.$base---primary ;
+      background: variables.$base---secondary;
+      border: 1px solid variables.$base---secondary;
+      &>.mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    
+    &.outline-button{
+      color: variables.$base---primary ;
+      background: variables.$base---light;
+      outline: 1px solid variables.$line---extra !important;
+      border: 0px solid;
+      &>.mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &.white-button{
+      color: variables.$base---primary ;
+      background: variables.$base---light;
+      border: 1px solid variables.$base---light;
+      &>.mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &:disabled {
+      background: variables.$base---primary;
+      color: variables.$text---light ;
+      opacity: 0.5;
+       &>.mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: brightness(0) saturate(100%) invert(96%) sepia(96%) saturate(16%) hue-rotate(291deg) brightness(105%) contrast(105%);
+      }
+    }
+  }
+  .icononly {
+    padding-left: unset !important;
+    padding-right: unset !important;
+    min-width:unset !important;
+  }
+}
