@@ -1,5 +1,8 @@
 @use '../../styles/variables.scss' as vars; 
-.aa-menu {
+@use '../../styles/media.mixin.scss' as *;
+@use '../../styles/nds-mixins.scss' as nds;
+@include nds.nds-buttons;
+.main-menu {
     display: flex; 
     justify-content:space-around;
     align-items: center;
@@ -12,14 +15,19 @@
     margin-right: 6vw;
     margin-left: 6vw;
     margin-top: 0.2vh;
+    @include mobile {
+      display: none;
+    }
     &-href {
         color:  vars.$base---primary;
         text-decoration:none;
-        font-size: 1.1vw;
         font-weight: 300;
         display: flex;
         align-items: center;
-        gap:8px
+        gap:8px;
+        & > mat-icon {
+          margin-bottom: 2px;
+        }
     }
     &-contact {
         margin-left: -48px;
@@ -27,4 +35,22 @@
         align-items: center;
         gap: 8px;
     }
+}
+.mobile-menu-button {
+  display: none;
+  @include mobile {
+    position: fixed;
+    display: flex;
+    top:8px;
+    left: 3vw;
+  }
+}
+::ng-deep .mobile-menu {
+  background-color:  vars.$base---secondary !important;
+  opacity: 0.85;
+  border-radius: vars.$corner-radius--m !important;
+  width: 100vw;
+}
+.mobile-menu-item {
+  color: vars.$base---primary !important;
 }

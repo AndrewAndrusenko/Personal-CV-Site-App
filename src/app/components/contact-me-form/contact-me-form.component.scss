@@ -1,4 +1,5 @@
 @use '../../styles/variables.scss' as vars; 
+@use '../../styles/media.mixin.scss' as *;
 .title-wrap {
   text-align: center;
   color: vars.$base---primary;
@@ -8,15 +9,28 @@
   font-weight: bold;
   color: vars.$base---primary;
   margin-bottom: 4vh;
+  @include mobile {
+    font-size: vars.$body---l---regular;
+    margin-bottom: 0px;
+  }
 }
 .m-h2{
   font-size: 1.2vw;
   line-height: 1.2vw;
+  @include mobile {
+    font-size: vars.$body---m---regular;
+    margin-bottom: 0px;
+    line-height: unset;
+    margin-top: 0px;
+  }
 }
 .contact-me-wrap{
   justify-content: center;
   width: 100%;
   display: flex;
+  @include mobile {
+    margin-top: 8px;
+  }
 }
 .contact-me-wrap form {
   display: grid;
@@ -27,6 +41,10 @@
   -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
   -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
   box-shadow:0 0 1vw  var(--boxShadowColor);
+  @include mobile {
+    width:96%;
+  }
+
 }
 .send-wrap {
   display: flex;
@@ -37,10 +55,17 @@
   color: vars.$base---primary;
   font-size: 1.3vw;
   margin: 0;
+  @include mobile {
+    font-size: vars.$body---l---regular;
+  }
 }
 .send-wrap img {
   margin-left: 1vw;
   width: 3vw;
+  @include mobile {
+    width: 24px;
+    margin-right: 6px;
+  }
 }
 .mat-form-field {
   background-color: vars.$base---light-hover;
@@ -81,6 +106,11 @@
     border: 0;
     border-radius: vars.$corner-radius--s;
     color: vars.$base---light-hover;
+    @include mobile {
+      width: 90%;
+      height: auto;
+      min-height: 36px;
+    }
     &:disabled {
         opacity: 0.5;
     }

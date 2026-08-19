@@ -1,20 +1,77 @@
-<div class="aa-menu">
-    <a class="aa-menu-href" href="./" (click)="navigateToSection('AAA')">{{myName}}</a>
-    <a class="aa-menu-href" href="./" (click)="openPDF('assets/CV_AndrewAndrusenko.pdf')">Resume</a>
-    <a class="aa-menu-href" href="./#Skills" (click)="navigateToSection('skills')">Skills</a>
-    <a class="aa-menu-href" href="./#Experience" (click)="navigateToSection('experience')">Experience</a>
-    <a class="aa-menu-href" href="./#AAM-core" (click)="navigateToSection('aam-core')">Projects</a>
-    <a class="aa-menu-href" href="https://github.com/AndrewAndrusenko" target="_blank">
-        <mat-icon svgIcon="github-fill"></mat-icon>
-        Github
+<div class="main-menu">
+  @for (item of menuItems; track item) {
+    <a
+      class="main-menu-href"
+      [href]="item.href"
+      (click)="item.handler ? item.handler(item.arg!) : null"
+    >
+      @if (item.icon) {
+        <mat-icon [svgIcon]="item.icon"></mat-icon>
+      }
+      <span>{{ item.label }}</span>
     </a>
-    <div class="aa-menu-contact">
-        <a class="aa-menu-href" href="./#Contact" (click)="navigateToSection('contact')" matTooltip="Contact Form">Contact</a>
-        <a class="aa-menu-href" href="https://www.linkedin.com/in/andrey-andrusenko-2b441b203/" matTooltip="Go to LinkedIn page" target="_blank">
-            <mat-icon style="transform:scale(1.2)" svgIcon="linkedin-box-fill"></mat-icon>
-        </a>
-        <a class="aa-menu-href" href="https://www.facebook.com/profile.php?id=100006265744393" matTooltip="Go to Facebook page" target="_blank">
-                <mat-icon svgIcon="facebook-fill" style="transform:scale(0.9)"></mat-icon>
-        </a>
-    </div>        
+  }
+  <div class="main-menu-contact">
+    <a
+      class="main-menu-href"
+      href="./#contact"
+      (click)="navigateToSection('contact')"
+      matTooltip="Contact Form"
+    >
+      Contact
+    </a>
+    <a
+      class="main-menu-href"
+      href="https://www.linkedin.com/in/andrey-andrusenko-2b441b203/"
+      matTooltip="Go to LinkedIn page"
+      target="_blank"
+    >
+      <mat-icon
+        style="transform: scale(1.2)"
+        svgIcon="linkedin-box-fill"
+      ></mat-icon>
+    </a>
+    <a
+      class="main-menu-href"
+      href="https://www.facebook.com/profile.php?id=100006265744393"
+      matTooltip="Go to Facebook page"
+      target="_blank"
+    >
+      <mat-icon
+        svgIcon="facebook-fill"
+        style="transform: scale(0.9)"
+      ></mat-icon>
+    </a>
+  </div>
 </div>
+
+<button
+  [matMenuTriggerFor]="menu"
+  class="mobile-menu-button button-icon size-l secondary-button"
+>
+  <mat-icon svgIcon="menu-fill"></mat-icon>
+  <span> Menu </span>
+</button>
+<mat-menu #menu="matMenu" class="mobile-menu">
+  @for (item of menuItems; track item) {
+    <button
+      mat-menu-item
+      class="mobile-menu-item"
+      (click)="item.handler ? item.handler(item.arg!) : null"
+    >
+      @if (item.icon) {
+        <mat-icon [svgIcon]="item.icon"></mat-icon>
+      }
+      <span>{{ item.label }}</span>
+    </button>
+  }
+
+  <button
+    mat-menu-item
+    class="mobile-menu-item"
+    (click)="navigateToSection('contact')"
+  >
+    <mat-icon svgIcon="message-2-fill"></mat-icon>
+    Contact
+  </button>
+</mat-menu>

@@ -1,4 +1,5 @@
 @use '../../styles/variables.scss' as vars; 
+@use "../../styles//media.mixin.scss" as *;
 .typingBlockying-block {
     color: vars.$base---primary;
     font-size: 1.9vw; 
@@ -6,6 +7,9 @@
     flex-direction: row;
     align-items: center;
     gap:6px;
+    @include mobile {
+      font-size: vars.$body---l---regular;
+    }
     & > span {
       color:vars.$base---primary; 
       font-weight: 400;
@@ -15,6 +19,9 @@
   animation: blink 1s linear infinite;
   color: vars.$base---primary; 
   font-size: 1.9vw; 
+  @include mobile {
+      font-size: vars.$body---l---regular;
+  }
 }
 @keyframes blink {
   0% {
@@ -22,13 +29,5 @@
   }
   50% {
     opacity: 0%;
-  }
-}
-@media (max-width:480px) {
-  .typingBlockying-block  {
-    font-size: 6vw;
-  }
-  #cursor {
-    font-size: 6vw; 
   }
 }

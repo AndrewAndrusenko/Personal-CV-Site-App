@@ -1,24 +1,32 @@
 @use '../../styles/variables.scss' as vars; 
+@use '../../styles/media.mixin.scss' as *;
+
 .footer-wrap {
   margin-top: 4vh;
   padding-bottom: 2vh;
   display: grid;
   justify-content: center;
+  @include mobile {
+    margin-top: 0px;
+  }
 }
 .footer-wrap h1 {
   color:vars.$base---primary;
   text-align: center;
+  @include mobile {
+    font-size: vars.$heading---m;
+    margin-bottom: 4px;
+  }
 }
 .icon-container {
   display: inline-flex;
   gap: 2vw;
+  margin-bottom: 20px;
   justify-content: space-around;
 }
 .icon-container  img {
   width: 4vh;
-} 
-@media (max-width:480px) {
-  .icon-container {
-    gap: 6vw;
+  @include mobile {
+    width: 30px;
   }
-}
+} 
