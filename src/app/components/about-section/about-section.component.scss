@@ -1,5 +1,7 @@
 @use "../../styles/variables.scss" as vars;
 @use "../../styles//media.mixin.scss" as *;
+@use '../../styles/nds-mixins.scss' as nds;
+@include nds.nds-buttons;
 main {
   display: flex;
   .updates {
@@ -32,12 +34,14 @@ main {
     display: flex;
     flex-direction: column;
     width: 50vw;
+    min-width: 835px;
     margin-right: 8vw;
     font-size: 1.5vw;
     color: vars.$text---primary;
     font-weight: 300;
     @include mobile {
       width: 96vw;
+      min-width: unset;
       font-size: vars.$body---l---regular;
     }
     & > .greeting {
@@ -106,25 +110,38 @@ main {
           margin-right: 3vw;
           padding: 8px;
         }
-        & > .project-title {
+        & > .first-line {
           display: flex;
-          align-items: center;
-          gap: 8px;
-          & > mat-icon {
-            width: 32px;
-            height: 32px;
-            @include mobile {
-              min-width: 18px;
-              min-height: 18px;
+          flex-direction: row;
+          justify-content: space-between;
+          & > .project-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            & > mat-icon {
+              width: 32px;
+              height: 32px;
+              @include mobile {
+                min-width: 18px;
+                min-height: 18px;
+              }
+            }
+            & > span {
+              font-size: vars.$heading---l;
+              font-weight: 400;
+              @include mobile {
+                font-size: vars.$body---l---regular;
+              }
             }
           }
-          & > span {
-            font-size: vars.$heading---l;
-            font-weight: 400;
+          & > button {
             @include mobile {
-              font-size: vars.$body---l---regular;
+              min-width: 84px;
+              padding: 8px 12px 8px 12px;
+              gap:4px;
             }
           }
+
         }
         & > .project-bullets {
           margin-left: 30px;
@@ -194,4 +211,27 @@ main {
 }
 .bold-item {
   font-weight: 600;
+}
+::ng-deep .dialog-project > .mdc-dialog--open .mat-mdc-dialog-surface, .mdc-dialog--closing .mat-mdc-dialog-surface {
+  background-color: vars.$base---light-hover;
+  border-radius: vars.$corner-radius--l;
+  @include mobile {
+    min-height: 50vh;
+  }
+    &::-webkit-scrollbar-track {
+      background-color:vars.$base---secondary;
+    }
+    &::-webkit-scrollbar {
+        -webkit-box-shadow: none;
+        width:4px  !important;
+    }
+    &::-webkit-scrollbar-button {
+      background-color:transparent !important;
+    }
+    &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: none;
+        background-color:vars.$base---secondary;
+        border-top: 60px solid vars.$base---primary;
+        width:4px ;
+    }
 }

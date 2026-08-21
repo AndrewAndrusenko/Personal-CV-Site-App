@@ -1,0 +1,123 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Business Process & Electronic Document Management System",
+      "demo_urls": [
+        {
+          "label": "Demo Company 1 Instance",
+          "url": "https://ppklrx85-5001.euw.devtunnels.ms/apps/crm1/"
+        },
+        {
+          "label": "Demo Bank 2 Instance",
+          "url": "https://ppklrx85-5001.euw.devtunnels.ms/apps/crm2/"
+        }
+      ],
+      "repositories": [
+        {
+          "repository_private": true,
+          "repository_text": "Private (Available for live review during interviews)"
+        }
+      ],
+      "icon": "briefcase-4-fill",
+      "bullets": [
+        "Deleveloped in-house interactive data visualization library",
+        "Library covers business processes, contracts diagrams and provides functionality to manage these objects",
+        "Implemented new UI, design model, best practices. And more.."
+      ],
+      "slides": [
+        "assets/images/pro_slide1.jpg",
+        "assets/images/pro_slide2.jpg",
+        "assets/images/pro_slide3.jpg",
+        "assets/images/pro_slide4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Asset Management Platform",
+      "demo_urls": [
+        {
+          "label": "https://ppklrx85-5001.euw.devtunnels.ms/apps/aam/",
+          "url": "https://ppklrx85-5001.euw.devtunnels.ms/apps/aam/"
+        }
+      ],
+      "repositories": [
+        {
+          "repository_private": true,
+          "repository_text": "Private (Available for live review during interviews)"
+        }
+      ],
+      "icon": "coins-fill",
+      "bullets": [
+        "Ready-to-go asset management system from scratch",
+        "Comprehensive financial accounting system",
+        "Full-scale asset management model. And more.."
+      ],
+      "slides": [
+        "assets/images/aam_slide0.jpg",
+        "assets/images/aam_slide1.jpg",
+        "assets/images/aam_slide2.jpg",
+        "assets/images/aam_slide3.jpg",
+        "assets/images/aam_slide4.jpg",
+        "assets/images/aam_slide5.jpg",
+        "assets/images/aam_slide6.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Stock quotes in real time",
+      "demo_urls": [
+        {
+          "label": "https://ppklrx85-5001.euw.devtunnels.ms/apps/rtq/",
+          "url": "https://ppklrx85-5001.euw.devtunnels.ms/apps/rtq/"
+        }
+      ],
+      "repositories": [
+        {
+          "repository_private": false,
+          "repository_text": "Main - Frontend-RealTime-StockQuotes-WSS",
+          "repository_url": "https://github.com/AndrewAndrusenko/RealTime-StockQuotes-WSS-Frontend"
+        },
+        {
+          "repository_private": false,
+          "repository_text": "Supporting - Backend-RealTime-StockQuotes-WSS",
+          "repository_url": "https://github.com/AndrewAndrusenko/RealTime-StockQuotes-WS-Backend"
+        }
+      ],
+      "icon": "exchange-box-fill",
+      "bullets": [
+        "A real-time processing system with a stream rate of 50 ms",
+        "Stream management with RxJS buffering, refresh rate settings",
+        "WebSockets. Rendering optimization. And more.."
+      ],
+      "slides": ["assets/images/rtq_slide1.jpg", "assets/images/rtq_slide2.jpg"]
+    },
+    {
+      "id": 4,
+      "title": "Flexible JWT authentication server",
+      "demo_urls": [
+        {
+          "label": "https://ppklrx85-5001.euw.devtunnels.ms/apps/ssngrx/",
+          "url": "https://ppklrx85-5001.euw.devtunnels.ms/apps/ssngrx/"
+        }
+      ],
+      "repositories": [
+        {
+          "repository_private": false,
+          "repository_text": "Auth-Server-Frontend",
+          "repository_url": "https://github.com/AndrewAndrusenko/Auth-Server-Frontend"
+        },
+        {
+          "repository_private": false,
+          "repository_text": "Auth-Server-Backend",
+          "repository_url": "https://github.com/AndrewAndrusenko/Auth-Server-Backend"
+        }
+      ],
+      "icon": "lock-password-fill",
+      "bullets": [
+        "The access and refresh token pattern",
+        "Easily connecting to other applications. And more.."
+      ]
+    }
+  ]
+}

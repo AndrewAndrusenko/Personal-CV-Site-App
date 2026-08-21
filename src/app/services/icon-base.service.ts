@@ -24,7 +24,11 @@ export class IconBaseService {
         'graduation-cap-fill', 
         'message-2-fill', 
         'shake-hands-fill', 
-        'article-fill'
+        'article-fill',
+        'more-2-fill',
+        'close-line', 
+        'arrow-left-s-line', 
+        'arrow-right-s-line',
     ])
     prepareIcons() {
         const iconRegistry = inject(MatIconRegistry);

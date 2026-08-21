@@ -1,0 +1,88 @@
+<div class="title">
+  <div class="project-container">
+    <div class="first-line">
+      <div class="project-title">
+        <mat-icon [svgIcon]="project().icon"></mat-icon>
+        <span class="base-color">{{ project().title }}</span>
+      </div>
+    </div>
+    <!--   <div class="project-bullets">
+      @for (bullet of project().bullets; track bullet) {
+        <div class="project-bullets-item">
+          <mat-icon svgIcon="checkbox-circle-fill"></mat-icon>
+          <span style="line-height: normal; width: 90%">
+            {{ bullet }}
+          </span>
+        </div>
+      }
+    </div> -->
+    <div class="project-links">
+      <div class="project-demo">
+        @for (demo of project().demo_urls; track demo) {
+          <div class="demo-item">
+            <mat-icon svgIcon="mac-fill"></mat-icon>
+            <a [href]="demo.url" target="_blank">
+              Live Demo: {{ demo.label }}
+            </a>
+          </div>
+        }
+      </div>
+      <div class="project-demo">
+        @for (repo of project().repositories; track repo) {
+          <div class="demo-item">
+            <mat-icon svgIcon="github-fill"></mat-icon>
+            @if (repo.repository_private) {
+              <div>Code Repository: {{ repo.repository_text }}</div>
+            } @else {
+              <a [href]="repo.repository_url" target="_blank">
+                Code Repository: {{ repo.repository_text }}
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="button-block">
+    <button
+      mat-dialog-close
+      class="button-icon secondary-button icononly size-m close-button"
+    >
+      <mat-icon svgIcon="close-line"></mat-icon>
+    </button>
+    <div class="nav-buttons">
+      <button
+        class="button-icon secondary-button icononly size-l"
+        (click)="scroll(slider, 'left')"
+      >
+        <mat-icon svgIcon="arrow-left-s-line"></mat-icon>
+      </button>
+      <button
+        class="button-icon secondary-button icononly size-l"
+        (click)="scroll(slider, 'right')"
+      >
+        <mat-icon svgIcon="arrow-right-s-line"></mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="slider-wrapper">
+  <div class="slides-container" #slider (wheel)="onWheel($event, slider)">
+    @for (image of project().slides; track image) {
+      <div class="slide">
+        <img [src]="image" alt="Slide" (click)="openFullscreen(image)" />
+      </div>
+    }
+  </div>
+</div>
+
+<dialog class="slide-full" #fullscreenDialog>
+  <button
+    class="button-icon secondary-button icononly size-m close-button"
+    (click)="fullscreenDialog.close()"
+  >
+    <mat-icon svgIcon="close-line"></mat-icon>
+  </button>
+  <img [src]="selectedImage" alt="Fullscreen preview" />
+</dialog>

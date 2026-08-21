@@ -52,10 +52,10 @@ export class MainMenuComponent {
       },
       {
         label: 'Projects',
-        href: './#aam-core',
+        href: './#about',
         icon: 'mac-fill',
         handler: this.navigateToSection,
-        arg: 'aam-core',
+        arg: 'about',
       },
       {
         label: 'Github',
