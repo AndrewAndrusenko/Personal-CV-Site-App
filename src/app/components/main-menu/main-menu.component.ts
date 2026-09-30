@@ -1,5 +1,5 @@
 import { NgTemplateOutlet, ViewportScroller } from '@angular/common';
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, inject, effect } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
@@ -38,7 +38,7 @@ export class MainMenuComponent {
         href: './',
         icon: 'article-fill',
         handler: this.openPDF,
-        arg: 'assets/CV_AndrewAndrusenko.pdf',
+        arg: 'assets/cv/CV_AndrewAndrusenko.pdf',
       },
       {
         label: 'skills',
@@ -68,6 +68,14 @@ export class MainMenuComponent {
         icon: 'github-fill',
       },
     ];
+    effect(() => {
+      let menuItem = this.menuItems.find(el=>el.label==='resume')
+      if (menuItem?.arg) {
+        menuItem.arg = this.languageService.currentLang() === 'En'? 
+          'assets/cv/CV_AndrewAndrusenko.pdf' 
+          : 'assets/cv/CV_AndrewAndrusenkoRu.pdf'
+      }
+    });
   }
   ngOnInit(): void {
     let offset = window.innerHeight < 600 ? 40 : 30;

@@ -54,8 +54,8 @@ export const LOCALIZATION = {
 
   hard_skills: { En: 'Hard Skills', Ru: 'Технические навыки' },
   skills_introduce: {
-    En: 'Here are some of my skills on which I have been working on for the past 5 years.',
-    Ru: 'Вот некоторые из моих навыков, которые я активно развиваю последние 5 лет',
+    En: 'Here are some of my skills on which I have been working on for the past 10 years.',
+    Ru: 'Вот некоторые из моих навыков, которые я активно развиваю последние 10 лет',
   },
 
   my_exp_introduce: {
